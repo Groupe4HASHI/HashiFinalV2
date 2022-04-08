@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class MenuTutoriel - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="Menu.html">Menu</a>
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-MenuTutoriel">
+  <h1 id="class-MenuTutoriel" class="class">
+    class MenuTutoriel
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-new" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File Hashi/MenuTutoriel.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>
+    <span class="ruby-keyword">super</span>()
+    <span class="ruby-ivar">@numPage</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">add_from_file</span>(<span class="ruby-string">&quot;./glade_ressources/MenuTutoriel.glade&quot;</span>)
+        <span class="ruby-comment"># Creation d&#39;une variable d&#39;instance par composant identifié dans glade</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Création des variables d&#39;instances&quot;</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">objects</span>.<span class="ruby-identifier">each</span>() { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">itself</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;Gtk::TextBuffer&quot;</span>) <span class="ruby-keyword">then</span>
+                                <span class="ruby-comment"># L&#39;utilisation de TextBuffer est incompatible avec la recherche de variable d&#39;instance en dessous</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-keyword">unless</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">builder_name</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">&quot;___object&quot;</span>)
+                                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\tCreation de la variable d&#39;instance @#{p.builder_name} avec la methode &quot;</span>
+                                        <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{p.builder_name}&quot;</span>.<span class="ruby-identifier">intern</span>, <span class="ruby-keyword">self</span>[<span class="ruby-identifier">p</span>.<span class="ruby-identifier">builder_name</span>])
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+        }
+
+        <span class="ruby-comment"># Validation par l&#39;utilisateur avant de fermer l&#39;appli</span>
+        <span class="ruby-ivar">@MenuTutoriel</span>.<span class="ruby-identifier">signal_connect</span>(<span class="ruby-string">&#39;delete-event&#39;</span>) {
+                <span class="ruby-identifier">d</span> = <span class="ruby-constant">Gtk</span>.<span class="ruby-constant">MessageDialog</span>(<span class="ruby-identifier">transient_for</span>=<span class="ruby-keyword">self</span>, <span class="ruby-identifier">modal</span>=<span class="ruby-constant">True</span>, <span class="ruby-identifier">buttons</span>=<span class="ruby-constant">Gtk</span>.<span class="ruby-constant">ButtonsType</span>.<span class="ruby-constant">OK_CANCEL</span>)
+        <span class="ruby-identifier">d</span>.<span class="ruby-identifier">props</span>.<span class="ruby-identifier">text</span> = <span class="ruby-string">&#39;Êtes-vous sûr?&#39;</span>
+        <span class="ruby-identifier">response</span> = <span class="ruby-identifier">d</span>.<span class="ruby-identifier">run</span>()
+        <span class="ruby-identifier">d</span>.<span class="ruby-identifier">destroy</span>()
+
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">response</span> <span class="ruby-operator">==</span> <span class="ruby-constant">Gtk</span>.<span class="ruby-constant">ResponseType</span>.<span class="ruby-constant">OK</span>
+            <span class="ruby-keyword">return</span> <span class="ruby-constant">False</span>
+                <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-constant">True</span>
+        <span class="ruby-keyword">end</span>
+        }
+
+        <span class="ruby-ivar">@menu</span> = <span class="ruby-ivar">@MenuTutoriel</span>
+
+        <span class="ruby-ivar">@MenuTutoriel</span>.<span class="ruby-identifier">signal_connect</span>(<span class="ruby-string">&#39;destroy&#39;</span>) { <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Fermeture&quot;</span>; <span class="ruby-constant">Gtk</span>.<span class="ruby-identifier">main_quit</span> }
+        <span class="ruby-comment"># On connecte les signaux aux méthodes (qui doivent exister)</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;\nConnexion des signaux&quot;</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">connect_signals</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">handler</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\tConnection du signal #{handler}&quot;</span>
+                        <span class="ruby-keyword">begin</span>
+                                <span class="ruby-identifier">method</span>(<span class="ruby-identifier">handler</span>)
+                        <span class="ruby-keyword">rescue</span>
+                                <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\t\t[Attention] Vous devez definir la methode #{handler} :\n\t\t\tdef #{handler}\n\t\t\t\t....\n\t\t\tend\n&quot;</span>
+                                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">send</span>( <span class="ruby-value">:define_method</span>, <span class="ruby-identifier">handler</span>.<span class="ruby-identifier">intern</span>) {
+                                        <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;La methode #{handler} n&#39;est pas encore définie.. Arrêt&quot;</span>
+                                        <span class="ruby-constant">Gtk</span>.<span class="ruby-identifier">main_quit</span>
+                                }
+                                <span class="ruby-keyword">retry</span>
+                        <span class="ruby-keyword">end</span>
+        }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

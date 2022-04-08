@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Sauvegarde - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="Object.html">Object</a>
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-chargeLaGrille">::chargeLaGrille</a>
+    <li ><a href="#method-c-chargeLaGrilleHypo">::chargeLaGrilleHypo</a>
+    <li ><a href="#method-c-creer">::creer</a>
+    <li ><a href="#method-c-creerDossier">::creerDossier</a>
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-c-supprimeTout">::supprimeTout</a>
+    <li ><a href="#method-i-chargeToi">#chargeToi</a>
+    <li ><a href="#method-i-chargeToiHypo">#chargeToiHypo</a>
+    <li ><a href="#method-i-sauvegardeToi">#sauvegardeToi</a>
+    <li ><a href="#method-i-sauvegardeToiHypo">#sauvegardeToiHypo</a>
+    <li ><a href="#method-i-supprimeToi">#supprimeToi</a>
+    <li ><a href="#method-i-supprimeToiHypo">#supprimeToiHypo</a>
+    <li ><a href="#method-i-to_s">#to_s</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Sauvegarde">
+  <h1 id="class-Sauvegarde" class="class">
+    class Sauvegarde
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      <div id="attribute-i-difficulte" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">difficulte</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Variables d’instances @temps : La durée de la partie est sauvegardé @difficulte : La difficulté de la grille est sauvegardé @niveau : Le niveau de la grille est sauvegardé @finie : Pour savoir si la partie est finie ou non @profil : Le profil utilisé est sauvegardé</p>
+        </div>
+      </div>
+      <div id="attribute-i-finie" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">finie</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Variables d’instances @temps : La durée de la partie est sauvegardé @difficulte : La difficulté de la grille est sauvegardé @niveau : Le niveau de la grille est sauvegardé @finie : Pour savoir si la partie est finie ou non @profil : Le profil utilisé est sauvegardé</p>
+        </div>
+      </div>
+      <div id="attribute-i-niveau" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">niveau</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Variables d’instances @temps : La durée de la partie est sauvegardé @difficulte : La difficulté de la grille est sauvegardé @niveau : Le niveau de la grille est sauvegardé @finie : Pour savoir si la partie est finie ou non @profil : Le profil utilisé est sauvegardé</p>
+        </div>
+      </div>
+      <div id="attribute-i-temps" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">temps</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Variables d’instances @temps : La durée de la partie est sauvegardé @difficulte : La difficulté de la grille est sauvegardé @niveau : Le niveau de la grille est sauvegardé @finie : Pour savoir si la partie est finie ou non @profil : Le profil utilisé est sauvegardé</p>
+        </div>
+      </div>
+    </section>
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-chargeLaGrille" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">chargeLaGrille</span><span
+            class="method-args">(grille)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Regarde si il y a une sauvegarde de la grille dans les dossiers et charge cette sauvegarde de la grille</p>
+
+<pre class="ruby"><span class="ruby-operator">-</span><span class="ruby-identifier">grille</span>
+</pre>
+
+          <div class="method-source-code" id="chargeLaGrille-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 241</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier ruby-title">chargeLaGrille</span>(<span class="ruby-identifier">grille</span>)
+        <span class="ruby-identifier">data</span> = [] <span class="ruby-comment">#va contenir toute les lignes de la sauvegarde de la grille</span>
+        <span class="ruby-comment">#Pour prendre le bon chemin qui amène au bon fichier .txt qui contient  la sauvegarde de la grille</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">difficulte</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv1&quot;</span>
+                        <span class="ruby-identifier">grilletxt</span>=<span class="ruby-node">&quot;Sauvegarde/Save/Facile/grille#{grille.niveau}_#{Profil.getProfilAt(Profil.getJeu.menuPrincipal.comboBoxProfil.active).nom}.txt&quot;</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv2&quot;</span>
+                        <span class="ruby-identifier">grilletxt</span>=<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/grille#{grille.niveau}_#{Profil.getProfilAt(Profil.getJeu.menuPrincipal.comboBoxProfil.active).nom}.txt&quot;</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv3&quot;</span>
+                        <span class="ruby-identifier">grilletxt</span>=<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/grille#{Profil.getProfilAt(Profil.getJeu.menuPrincipal.comboBoxProfil.active).nom}.txt&quot;</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment">#je parcours le fichier .txt qui contient la sauvegarde de la grille et je met chaque ligne dans mon tableau data</span>
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">grilletxt</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">data</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp</span>
+<span class="ruby-keyword">end</span>
+        <span class="ruby-comment">#Parcours de la grille pour ajouter les liens entre les noeuds si ils en avaient</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span>() <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+    <span class="ruby-identifier">data</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;:&#39;</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">caseGrille</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span> <span class="ruby-comment">#Parcours du fichier .txt avec &#39;:&#39; en tant que séparateur</span>
+                        <span class="ruby-keyword">case</span> <span class="ruby-identifier">caseGrille</span>
+                                <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;-&#39;</span>
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment">#Vérifie que la case à gauche de la case actuelle n&#39;est pas vide</span>
+                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;n&quot;</span> <span class="ruby-comment">#Vérifie que la case à gauche est bien un noeud</span>
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span> <span class="ruby-comment">#Vérifie si il y a un voisin droit du noeud de la case à gauche</span>
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span>,<span class="ruby-keyword">false</span>) 
+                                                        <span class="ruby-keyword">end</span> <span class="ruby-comment">#Appelle de la méthode ajoutLien de la classe Grille qui va ajoute un lien entre les noeuds de la case à gauche et son voisin droit</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;=&#39;</span> <span class="ruby-comment">#reprend le même principe que celui du haut mais on appelle deux fois la methode ajoutLien pour faire un double lien</span>
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;n&quot;</span>
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span>,<span class="ruby-keyword">false</span>)
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span>,<span class="ruby-keyword">false</span>)
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span> 
+                                <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;|&#39;</span> <span class="ruby-comment">#reprend le même principe que le premier sauf qu&#39;on vérifie la case en haut</span>
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;n&quot;</span>
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span>,<span class="ruby-keyword">false</span>)
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;&quot;&#39;</span> <span class="ruby-comment">#reprend le même principe que celui du haut mais on appelle deux fois la methode ajoutLien pour faire un double lien</span>
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;n&quot;</span>
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span>,<span class="ruby-keyword">false</span>)
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span>,<span class="ruby-keyword">false</span>)
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-chargeLaGrilleHypo" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">chargeLaGrilleHypo</span><span
+            class="method-args">(grille)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Reprend les même fonctionnalités que celle du haut sauf que celle ci est pour les hypothèses</p>
+
+          <div class="method-source-code" id="chargeLaGrilleHypo-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 302</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier ruby-title">chargeLaGrilleHypo</span>(<span class="ruby-identifier">grille</span>)
+        <span class="ruby-identifier">data</span> = [] <span class="ruby-comment">#va contenir toute les lignes de la sauvegarde de la grille</span>
+        <span class="ruby-comment">#Pour prendre le bon chemin qui amène au bon fichier .txt qui contient  la sauvegarde de la grille</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">difficulte</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv1&quot;</span>
+                        <span class="ruby-identifier">grilletxt</span>=<span class="ruby-node">&quot;Sauvegarde/Save/Facile/grille#{grille.niveau}_#{Profil.getProfilAt(Profil.getJeu.menuPrincipal.comboBoxProfil.active).nom}_hypo.txt&quot;</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv2&quot;</span>
+                        <span class="ruby-identifier">grilletxt</span>=<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/grille#{grille.niveau}_#{Profil.getProfilAt(Profil.getJeu.menuPrincipal.comboBoxProfil.active).nom}_hypo.txt&quot;</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv3&quot;</span>
+                        <span class="ruby-identifier">grilletxt</span>=<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/grille#{Profil.getProfilAt(Profil.getJeu.menuPrincipal.comboBoxProfil.active).nom}_hypo.txt&quot;</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment">#je parcours le fichier .txt qui contient la sauvegarde de la grille et je met chaque ligne dans mon tableau data</span>
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">grilletxt</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">data</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp</span>
+<span class="ruby-keyword">end</span>
+        <span class="ruby-comment">#Parcours de la grille pour ajouter des liens entre les noeuds si ils en avaient</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span>() <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+    <span class="ruby-identifier">data</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;:&#39;</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">caseGrille</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+                        <span class="ruby-keyword">case</span> <span class="ruby-identifier">caseGrille</span>
+                                <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;-&#39;</span>
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;n&quot;</span>
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span>,<span class="ruby-keyword">false</span>)
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;=&#39;</span>
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;n&quot;</span>
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span>,<span class="ruby-keyword">false</span>)
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span><span class="ruby-value">-1</span>,<span class="ruby-identifier">i</span>).<span class="ruby-identifier">nDroit</span>,<span class="ruby-keyword">false</span>)
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span> 
+                                <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;|&#39;</span>
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;n&quot;</span>
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span>,<span class="ruby-keyword">false</span>)
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;&quot;&#39;</span>
+                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                                                <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;n&quot;</span>
+                                                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span>,<span class="ruby-keyword">false</span>)
+                                                                <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>),<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">index</span>,<span class="ruby-identifier">i</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">nBas</span>,<span class="ruby-keyword">false</span>)
+                                                        <span class="ruby-keyword">end</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-creer" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">creer</span><span
+            class="method-args">(difficulte,niveau,profil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Nouvelle Méthode de classe de création d’instance avec les paramètres:</p>
+
+<pre>-difficulte
+-niveau
+-profil
+Création d&#39;une sauvegarde</pre>
+
+          <div class="method-source-code" id="creer-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier ruby-title">creer</span>(<span class="ruby-identifier">difficulte</span>,<span class="ruby-identifier">niveau</span>,<span class="ruby-identifier">profil</span>)
+        <span class="ruby-identifier">new</span>(<span class="ruby-identifier">difficulte</span>,<span class="ruby-identifier">niveau</span>,<span class="ruby-identifier">profil</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-creerDossier" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">creerDossier</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Création des dossiers d’emplacements des sauvegardes</p>
+
+          <div class="method-source-code" id="creerDossier-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier ruby-title">creerDossier</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;Sauvegarde&quot;</span>))
+                <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-string">&quot;Sauvegarde&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;Sauvegarde/Save&quot;</span>))
+                <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-string">&quot;Sauvegarde/Save&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;Sauvegarde/Save/Facile&quot;</span>))
+                <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-string">&quot;Sauvegarde/Save/Facile&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;Sauvegarde/Save/Moyenne&quot;</span>))
+                <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-string">&quot;Sauvegarde/Save/Moyenne&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Dir</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-string">&quot;Sauvegarde/Save/Difficile&quot;</span>))
+                <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-string">&quot;Sauvegarde/Save/Difficile&quot;</span>)
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-new" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(difficulte,niveau,profil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Méthode d’instance d’initialisation sans paramètre.</p>
+
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">difficulte</span>,<span class="ruby-identifier">niveau</span>,<span class="ruby-identifier">profil</span>)
+        <span class="ruby-ivar">@difficulte</span>,<span class="ruby-ivar">@niveau</span>,<span class="ruby-ivar">@profil</span>=<span class="ruby-identifier">difficulte</span>,<span class="ruby-identifier">niveau</span>,<span class="ruby-identifier">profil</span>
+        <span class="ruby-ivar">@temps</span>=<span class="ruby-value">0</span>
+        <span class="ruby-ivar">@finie</span> = <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-supprimeTout" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">supprimeTout</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Supprime tous les fichiers sauvegardes dans le dossier Save</p>
+
+          <div class="method-source-code" id="supprimeTout-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 397</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier ruby-title">supprimeTout</span>
+        <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-string">&quot;Sauvegarde/Save/Facile/*&quot;</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">save</span><span class="ruby-operator">|</span> <span class="ruby-comment">#regarde tous les fichiers .sav du dossier et le supprime</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span>(<span class="ruby-identifier">save</span>))
+                        <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">save</span>)
+                <span class="ruby-keyword">end</span>
+        }
+        <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-string">&quot;Sauvegarde/Save/Moyenne/*&quot;</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">save</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span>(<span class="ruby-identifier">save</span>))
+                        <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">save</span>)
+                <span class="ruby-keyword">end</span>
+        }
+        <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-string">&quot;Sauvegarde/Save/Difficile/*&quot;</span>).<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">save</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> (<span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span>(<span class="ruby-identifier">save</span>))
+                        <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">save</span>)
+                <span class="ruby-keyword">end</span>
+        }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+      <div id="method-i-chargeToi" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">chargeToi</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Vérifie si il existe un fichier sauvegarde et le charge avec YAML</p>
+
+          <div class="method-source-code" id="chargeToi-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 187</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">chargeToi</span>
+        <span class="ruby-comment">#Vérifie la difficulté pour récupérer le fichier .sav au bon endroit</span>
+        <span class="ruby-keyword">case</span> <span class="ruby-ivar">@difficulte</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv1&quot;</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-constant">OS</span>.<span class="ruby-identifier">windows?</span>) <span class="ruby-comment">#Si c&#39;est un window effectue la méthode YAML.unsafe_load à la place de YAML.load</span>
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">unsafe_load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">else</span> 
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv2&quot;</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-constant">OS</span>.<span class="ruby-identifier">windows?</span>)
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">unsafe_load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">else</span> 
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">end</span> 
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv3&quot;</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-constant">OS</span>.<span class="ruby-identifier">windows?</span>)
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">unsafe_load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">else</span> 
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>  
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">save</span> <span class="ruby-comment">#retourne le fichier .sav ou nil si il n&#39;existe pas</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-chargeToiHypo" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">chargeToiHypo</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>La même méthode que celle du haut mais utilisé pour les hypothèses</p>
+
+          <div class="method-source-code" id="chargeToiHypo-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 213</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">chargeToiHypo</span>
+
+        <span class="ruby-keyword">case</span> <span class="ruby-ivar">@difficulte</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv1&quot;</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-constant">OS</span>.<span class="ruby-identifier">windows?</span>)
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">unsafe_load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">else</span> 
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv2&quot;</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-constant">OS</span>.<span class="ruby-identifier">windows?</span>)
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">unsafe_load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">else</span> 
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">end</span> 
+                <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv3&quot;</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-constant">OS</span>.<span class="ruby-identifier">windows?</span>)
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">unsafe_load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                        <span class="ruby-keyword">else</span> 
+                                <span class="ruby-identifier">save</span>= (<span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">?</span><span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>))<span class="ruby-operator">:</span><span class="ruby-keyword">nil</span>
+                <span class="ruby-keyword">end</span>  
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">save</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-sauvegardeToi" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">sauvegardeToi</span><span
+            class="method-args">(grille,temps)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Ajoute dans un fichier .sav  la difficulté, le niveau et le temps donné en paramètre. la grille me permet de créer un fichier .txt qui contiendra tous les changements apporté à la grille initiale </p>
+
+<pre class="ruby"><span class="ruby-operator">-</span><span class="ruby-identifier">temps</span> 
+<span class="ruby-operator">-</span><span class="ruby-identifier">grille</span>
+</pre>
+
+          <div class="method-source-code" id="sauvegardeToi-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 66</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sauvegardeToi</span>(<span class="ruby-identifier">grille</span>,<span class="ruby-identifier">temps</span>)
+                <span class="ruby-ivar">@temps</span> = <span class="ruby-identifier">temps</span>
+                <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier">creerDossier</span> <span class="ruby-comment">#Vérifie si les dossier de sauvegarde sont créé sinon je les créer</span>
+                <span class="ruby-identifier">dump</span>=<span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">dump</span>(<span class="ruby-keyword">self</span>) <span class="ruby-comment">#Va contenir mon objet de classe Sauvegarde qu&#39;il sera mis par la suite  dans un fichier .sav grâce à YAML</span>
+                <span class="ruby-comment">#Vérification de la difficulté du niveau pour créer le fichier .sav et ma grille.txt au bon endroit</span>
+                <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@difficulte</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;niv1&quot;</span>)
+                        <span class="ruby-identifier">file</span>= <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+                        <span class="ruby-identifier">grilletxt</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/grille#{@niveau}_#{@profil.nom}.txt&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@difficulte</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;niv2&quot;</span>)
+                        <span class="ruby-identifier">file</span>= <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}.sav&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+                        <span class="ruby-identifier">grilletxt</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/grille#{@niveau}_#{@profil.nom}.txt&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@difficulte</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;niv3&quot;</span>)
+                        <span class="ruby-identifier">file</span>= <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+                        <span class="ruby-identifier">grilletxt</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/grille#{@niveau}_#{@profil.nom}.txt&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+                <span class="ruby-keyword">end</span>   
+
+                <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">dump</span> <span class="ruby-comment">#Met l&#39;objet de classe Sauvegarde dans le fichier .sav</span>
+                <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span> <span class="ruby-comment">#et il faut bien sûr fermer le fichier .sav</span>
+<span class="ruby-comment">#Cette partie sera consacré à l&#39;écriture  de la grille avec toutes ses modifications(ajout de plusieurs lien,etc...)</span>
+<span class="ruby-comment">#en format .txt avec le fichier créer en haut</span>
+<span class="ruby-comment">#Parcours de la grille puis écriture dans le fichier tous les noeuds et les liens  avec les noeuds relié si ils le sont</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">lig</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">col</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+                                <span class="ruby-identifier">caseGrille</span> = <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">col</span>,<span class="ruby-identifier">lig</span>)
+                                <span class="ruby-keyword">if</span>(<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">status</span><span class="ruby-operator">==</span><span class="ruby-string">&#39;n&#39;</span>) <span class="ruby-comment">#Regarde si la case de ma grille est un noeud si c&#39;est le cas on note le chiffre qui le représente</span>
+                                        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbLiens</span>
+                                <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">if</span>(<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;l&#39;</span>) <span class="ruby-comment">#si la case de ma grille est un lien,on note le nombre de trait qu&#39;il représente</span>
+                                        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">direction</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;h&quot;</span>) <span class="ruby-comment">#Vérifie si c&#39;est un lien horizontal</span>
+                                                <span class="ruby-keyword">case</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbTrait</span>
+                                                        <span class="ruby-keyword">when</span> <span class="ruby-value">0</span>
+                                                                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;0&quot;</span> <span class="ruby-comment">#Met un 0 lorsqu&#39;il n&#39;y a pas de trait</span>
+                                                        <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+                                                                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;-&quot;</span> <span class="ruby-comment">#Met un - lorsqu&#39;il n&#39;y a qu&#39;un seul trait</span>
+                                                        <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+                                                                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;=&quot;</span> <span class="ruby-comment">#Met un = lorsqu&#39;il y a un double trait</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">else</span> <span class="ruby-comment">#Pareil lorsque c&#39;est un lien vertical il n&#39;y a que la notation dans fichier.txt qui change</span>
+                                                <span class="ruby-keyword">case</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbTrait</span>
+                                                        <span class="ruby-keyword">when</span> <span class="ruby-value">0</span>
+                                                                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;0&quot;</span><span class="ruby-comment">#Met un 0 lorsqu&#39;il n&#39;y a pas de trait</span>
+                                                        <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+                                                                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;|&quot;</span><span class="ruby-comment">#Met un | lorsqu&#39;il n&#39;y a qu&#39;un seul trait</span>
+                                                        <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+                                                                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&#39;&quot;&#39;</span><span class="ruby-comment">#Met un &quot; lorsqu&#39;il y a un double trait</span>
+                                                <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">if</span>(<span class="ruby-identifier">col</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">colonnes</span><span class="ruby-value">-1</span>) <span class="ruby-comment">#ensuite écriture de &quot;:&quot; qui sera le séparateur pour le parcour du fichier qu&#39;on verra plus bas</span>
+                                        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;:&quot;</span>
+                                <span class="ruby-keyword">else</span> 
+                                        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-comment">#et enfin saut d&#39;une ligne dans le fichier.txt lorsqu&#39;on passe à la ligne suivante</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">close</span> <span class="ruby-comment">#et on n&#39;oublie pas de fermer le fichier</span>
+        <span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-sauvegardeToiHypo" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">sauvegardeToiHypo</span><span
+            class="method-args">(grille,temps)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Cette methode est la même que celle du haut mais pour les hypothèses</p>
+
+          <div class="method-source-code" id="sauvegardeToiHypo-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">sauvegardeToiHypo</span>(<span class="ruby-identifier">grille</span>,<span class="ruby-identifier">temps</span>)
+        <span class="ruby-ivar">@temps</span> = <span class="ruby-identifier">temps</span>
+        <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier">creerDossier</span>
+        <span class="ruby-identifier">dump</span>=<span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">dump</span>(<span class="ruby-keyword">self</span>)
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@difficulte</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;niv1&quot;</span>)
+                <span class="ruby-identifier">file</span>= <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+                <span class="ruby-identifier">grilletxt</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/grille#{@niveau}_#{@profil.nom}_hypo.txt&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@difficulte</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;niv2&quot;</span>)
+                <span class="ruby-identifier">file</span>= <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+                <span class="ruby-identifier">grilletxt</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/grille#{@niveau}_#{@profil.nom}_hypo.txt&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@difficulte</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;niv3&quot;</span>)
+                <span class="ruby-identifier">file</span>= <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+                <span class="ruby-identifier">grilletxt</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/grille#{@niveau}_#{@profil.nom}_hypo.txt&quot;</span>,<span class="ruby-string">&quot;w&quot;</span>)
+        <span class="ruby-keyword">end</span>   
+
+        <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">dump</span>
+        <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
+
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">lig</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">col</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+                        <span class="ruby-identifier">caseGrille</span> = <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">col</span>,<span class="ruby-identifier">lig</span>)
+                        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">status</span><span class="ruby-operator">==</span><span class="ruby-string">&#39;n&#39;</span>)
+                                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbLiens</span>
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;l&#39;</span>)
+                                <span class="ruby-keyword">if</span>(<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">direction</span><span class="ruby-operator">==</span><span class="ruby-string">&quot;h&quot;</span>)
+                                        <span class="ruby-keyword">case</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbTrait</span>
+                                                <span class="ruby-keyword">when</span> <span class="ruby-value">0</span>
+                                                        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;0&quot;</span>
+                                                <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+                                                        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;-&quot;</span>
+                                                <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+                                                        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;=&quot;</span>
+                                        <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">else</span> 
+                                        <span class="ruby-keyword">case</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbTrait</span>
+                                                <span class="ruby-keyword">when</span> <span class="ruby-value">0</span>
+                                                        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;0&quot;</span>
+                                                <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+                                                        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;|&quot;</span>
+                                                <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+                                                        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&#39;&quot;&#39;</span>
+                                        <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">col</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">grille</span>.<span class="ruby-identifier">colonnes</span><span class="ruby-value">-1</span>)
+                                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;:&quot;</span>
+                        <span class="ruby-keyword">else</span> 
+                                <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;\n&quot;</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">grilletxt</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-supprimeToi" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">supprimeToi</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Supprime son fichier sav correspondant</p>
+
+          <div class="method-source-code" id="supprimeToi-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 363</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">supprimeToi</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">chargeToi</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>)<span class="ruby-comment">#Vérifie si il y a une sauvegarde (un fichier .sav) si oui le supprime</span>
+                <span class="ruby-keyword">case</span> <span class="ruby-ivar">@difficulte</span>
+                        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv1&quot;</span>
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>)
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/grille#{@niveau}_#{@profil.nom}.txt&quot;</span>)
+                        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv2&quot;</span>
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}.sav&quot;</span>)
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/grille#{@niveau}_#{@profil.nom}.txt&quot;</span>)
+                        <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;niv3&quot;</span>
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}.sav&quot;</span>)
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/grille#{@niveau}_#{@profil.nom}.txt&quot;</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-supprimeToiHypo" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">supprimeToiHypo</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Effectue la même chose que la méthode au dessus mais pour les hypothèses</p>
+
+          <div class="method-source-code" id="supprimeToiHypo-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">supprimeToiHypo</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">chargeToiHypo</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">nil</span>)<span class="ruby-comment">#Vérifie si il y a une sauvegarde (un fichier .sav) si oui le supprime</span>
+                <span class="ruby-keyword">case</span> <span class="ruby-ivar">@difficulte</span>
+                        <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>)
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Facile/grille#{@niveau}_#{@profil.nom}_hypo.txt&quot;</span>)
+                        <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>)
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Moyenne/grille#{@niveau}_#{@profil.nom}_hypo.txt&quot;</span>)
+                        <span class="ruby-keyword">when</span> <span class="ruby-value">3</span>
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/save#{@niveau}_#{@profil.nom}_hypo.sav&quot;</span>)
+                                <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-node">&quot;Sauvegarde/Save/Difficile/grille#{@niveau}_#{@profil.nom}_hypo.txt&quot;</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-to_s" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File Hashi/Sauvegarde.rb, line 416</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_s</span>
+<span class="ruby-keyword">return</span> <span class="ruby-node">&quot;Sauvegarde de #{@profil.nom} : temps #{@temps} , difficulté #{@difficulte} , niveau #{@niveau}, terminée? #{@finie}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

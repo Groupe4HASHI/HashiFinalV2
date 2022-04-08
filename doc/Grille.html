@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Grille - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link">Gtk::Grid
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-creer">::creer</a>
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-ajoutLien">#ajoutLien</a>
+    <li ><a href="#method-i-appelRedo">#appelRedo</a>
+    <li ><a href="#method-i-appelUndo">#appelUndo</a>
+    <li ><a href="#method-i-chargeGrille">#chargeGrille</a>
+    <li ><a href="#method-i-clickReaction">#clickReaction</a>
+    <li ><a href="#method-i-grilleFini-3F">#grilleFini?</a>
+    <li ><a href="#method-i-lesLiensEntre">#lesLiensEntre</a>
+    <li ><a href="#method-i-lienValide-3F">#lienValide?</a>
+    <li ><a href="#method-i-lienValideChoixPossible-3F">#lienValideChoixPossible?</a>
+    <li ><a href="#method-i-notification">#notification</a>
+    <li ><a href="#method-i-remplirVoisins">#remplirVoisins</a>
+    <li ><a href="#method-i-rendreImage">#rendreImage</a>
+    <li ><a href="#method-i-setChargement">#setChargement</a>
+    <li ><a href="#method-i-setHypothese">#setHypothese</a>
+    <li ><a href="#method-i-supprimeLien">#supprimeLien</a>
+    <li ><a href="#method-i-verifierGrille">#verifierGrille</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Grille">
+  <h1 id="class-Grille" class="class">
+    class Grille
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      <div id="attribute-i-chargement" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">chargement</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-colonnes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">colonnes</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Il s’agit d’une classe qui permet de representer une grille de hashi @nomGrille =&gt; le nom du fichier où est rechargé la grille(par exemple : “grille1.txt”) @niveau =&gt; le niveau de difficulté du jeu(facile, moyen, difficile) @lignes =&gt; le nombres de lignes de la grille @colonnes =&gt; le nombre de colonnes de la grille @undoRedo =&gt; un objet UndoRedo @sauvegarde =&gt; un objet sauvegarde @tabNoeuds =&gt; tableau contenant tout les noeuds @tabLiens =&gt; tableau contenant tout les liens @deuxNoeuds =&gt; un tableau qui memorise temporairement deux noeuds La grille a les comportements suivants : grilleFini?() =&gt; Vérifie si la grille est fini et a été correctement remplis cliquerSurNoeud() =&gt; permet de notifier la grille qu’on a cliqué sur un noeud creationLien() =&gt; permet d’ajouter un lien entre deux noeuds suppresionLien() =&gt; permet de supprimer un lien entre deux noeuds</p>
+        </div>
+      </div>
+      <div id="attribute-i-difficulte" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">difficulte</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-lignes" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">lignes</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Il s’agit d’une classe qui permet de representer une grille de hashi @nomGrille =&gt; le nom du fichier où est rechargé la grille(par exemple : “grille1.txt”) @niveau =&gt; le niveau de difficulté du jeu(facile, moyen, difficile) @lignes =&gt; le nombres de lignes de la grille @colonnes =&gt; le nombre de colonnes de la grille @undoRedo =&gt; un objet UndoRedo @sauvegarde =&gt; un objet sauvegarde @tabNoeuds =&gt; tableau contenant tout les noeuds @tabLiens =&gt; tableau contenant tout les liens @deuxNoeuds =&gt; un tableau qui memorise temporairement deux noeuds La grille a les comportements suivants : grilleFini?() =&gt; Vérifie si la grille est fini et a été correctement remplis cliquerSurNoeud() =&gt; permet de notifier la grille qu’on a cliqué sur un noeud creationLien() =&gt; permet d’ajouter un lien entre deux noeuds suppresionLien() =&gt; permet de supprimer un lien entre deux noeuds</p>
+        </div>
+      </div>
+      <div id="attribute-i-niveau" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">niveau</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-nomGrille" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nomGrille</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-redo" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">redo</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Il s’agit d’une classe qui permet de representer une grille de hashi @nomGrille =&gt; le nom du fichier où est rechargé la grille(par exemple : “grille1.txt”) @niveau =&gt; le niveau de difficulté du jeu(facile, moyen, difficile) @lignes =&gt; le nombres de lignes de la grille @colonnes =&gt; le nombre de colonnes de la grille @undoRedo =&gt; un objet UndoRedo @sauvegarde =&gt; un objet sauvegarde @tabNoeuds =&gt; tableau contenant tout les noeuds @tabLiens =&gt; tableau contenant tout les liens @deuxNoeuds =&gt; un tableau qui memorise temporairement deux noeuds La grille a les comportements suivants : grilleFini?() =&gt; Vérifie si la grille est fini et a été correctement remplis cliquerSurNoeud() =&gt; permet de notifier la grille qu’on a cliqué sur un noeud creationLien() =&gt; permet d’ajouter un lien entre deux noeuds suppresionLien() =&gt; permet de supprimer un lien entre deux noeuds</p>
+        </div>
+      </div>
+      <div id="attribute-i-sauvegarde" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">sauvegarde</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-tabLiens" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">tabLiens</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-tabNoeuds" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">tabNoeuds</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-undo" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">undo</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Il s’agit d’une classe qui permet de representer une grille de hashi @nomGrille =&gt; le nom du fichier où est rechargé la grille(par exemple : “grille1.txt”) @niveau =&gt; le niveau de difficulté du jeu(facile, moyen, difficile) @lignes =&gt; le nombres de lignes de la grille @colonnes =&gt; le nombre de colonnes de la grille @undoRedo =&gt; un objet UndoRedo @sauvegarde =&gt; un objet sauvegarde @tabNoeuds =&gt; tableau contenant tout les noeuds @tabLiens =&gt; tableau contenant tout les liens @deuxNoeuds =&gt; un tableau qui memorise temporairement deux noeuds La grille a les comportements suivants : grilleFini?() =&gt; Vérifie si la grille est fini et a été correctement remplis cliquerSurNoeud() =&gt; permet de notifier la grille qu’on a cliqué sur un noeud creationLien() =&gt; permet d’ajouter un lien entre deux noeuds suppresionLien() =&gt; permet de supprimer un lien entre deux noeuds</p>
+        </div>
+      </div>
+    </section>
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-creer" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">creer</span><span
+            class="method-args">(unNomGrille,uneDifficulte, unNiveau, nbLignes, nbColonnes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="creer-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Grille</span>.<span class="ruby-identifier ruby-title">creer</span>(<span class="ruby-identifier">unNomGrille</span>,<span class="ruby-identifier">uneDifficulte</span>, <span class="ruby-identifier">unNiveau</span>, <span class="ruby-identifier">nbLignes</span>, <span class="ruby-identifier">nbColonnes</span>)
+        <span class="ruby-identifier">new</span>(<span class="ruby-identifier">unNomGrille</span>,<span class="ruby-identifier">uneDifficulte</span>, <span class="ruby-identifier">unNiveau</span>, <span class="ruby-identifier">nbLignes</span>, <span class="ruby-identifier">nbColonnes</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-new" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(unNomGrille,uneDifficulte, unNiveau, nbLignes, nbColonnes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">unNomGrille</span>,<span class="ruby-identifier">uneDifficulte</span>, <span class="ruby-identifier">unNiveau</span>, <span class="ruby-identifier">nbLignes</span>, <span class="ruby-identifier">nbColonnes</span>)
+        <span class="ruby-keyword">super</span>()
+        <span class="ruby-ivar">@nomGrille</span>,<span class="ruby-ivar">@difficulte</span>, <span class="ruby-ivar">@niveau</span>, <span class="ruby-ivar">@lignes</span>, <span class="ruby-ivar">@colonnes</span> = <span class="ruby-identifier">unNomGrille</span>,<span class="ruby-identifier">uneDifficulte</span>, <span class="ruby-identifier">unNiveau</span>, <span class="ruby-identifier">nbLignes</span>, <span class="ruby-identifier">nbColonnes</span>
+        <span class="ruby-ivar">@deuxNoeuds</span> = []
+        <span class="ruby-ivar">@tabNoeuds</span> = []
+        <span class="ruby-ivar">@undo</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-ivar">@redo</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-ivar">@chargement</span> = <span class="ruby-keyword">false</span>
+        <span class="ruby-ivar">@hypothese</span> = <span class="ruby-keyword">false</span>
+        
+        <span class="ruby-ivar">@sauvegarde</span> = <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier">creer</span>(<span class="ruby-identifier">uneDifficulte</span>, <span class="ruby-identifier">unNiveau</span>,<span class="ruby-constant">Profil</span>.<span class="ruby-identifier">getProfilAt</span>(<span class="ruby-constant">Profil</span>.<span class="ruby-identifier">getJeu</span>.<span class="ruby-identifier">menuPrincipal</span>.<span class="ruby-identifier">comboBoxProfil</span>.<span class="ruby-identifier">active</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+      <div id="method-i-ajoutLien" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">ajoutLien</span><span
+            class="method-args">(n1,n2,undoRedoVal)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Ajoute un lien entre deux noeuds</p>
+
+          <div class="method-source-code" id="ajoutLien-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">ajoutLien</span>(<span class="ruby-identifier">n1</span>,<span class="ruby-identifier">n2</span>,<span class="ruby-identifier">undoRedoVal</span>)
+
+    <span class="ruby-comment"># incrémente le nombre de liens sur les noeuds</span>
+    <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">incrementeLiens</span>()
+    <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">incrementeLiens</span>()
+
+    <span class="ruby-comment"># Récupèration des cases separant deux noeuds</span>
+    <span class="ruby-identifier">liens</span> = <span class="ruby-identifier">lesLiensEntre</span>(<span class="ruby-identifier">n1</span>,<span class="ruby-identifier">n2</span>)
+
+    <span class="ruby-comment">#cas noeud Haut</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nHaut</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>
+                                    <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsHaut</span> = <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsHaut</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                                    <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsBas</span> = <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsBas</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">maj</span>
+        <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">maj</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>  <span class="ruby-comment">#cas noeud droit</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsDroit</span> = <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsDroit</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                                            <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsGauche</span> = <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsGauche</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">maj</span>
+        <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">maj</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nGauche</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span> <span class="ruby-comment">#cas noeud gauche</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsGauche</span> = <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsGauche</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                                            <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsDroit</span> = <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsDroit</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">maj</span>
+        <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">maj</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nBas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span> <span class="ruby-comment">#cas noeud bas</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsBas</span> = <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsBas</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                                            <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsHaut</span> = <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsHaut</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">maj</span>
+        <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">maj</span>
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">print</span>(<span class="ruby-string">&quot;Le lien ne peut pas être créé&quot;</span>)
+                            <span class="ruby-keyword">end</span>
+
+                            <span class="ruby-comment">#n1.majNbLiensCourant</span>
+    <span class="ruby-comment">#n2.majNbLiensCourant</span>
+
+    <span class="ruby-comment"># Ajoute le lien entre deux noeuds</span>
+    <span class="ruby-identifier">liens</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">lien</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">lien</span>.<span class="ruby-identifier">ajouterTrait</span>()
+        <span class="ruby-identifier">lien</span>.<span class="ruby-identifier">maj</span>
+    <span class="ruby-keyword">end</span>
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">undoRedoVal</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>
+            <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+                            <span class="ruby-keyword">end</span>
+                            <span class="ruby-ivar">@undo</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>, <span class="ruby-string">&#39;s&#39;</span>, <span class="ruby-string">&#39;1st&#39;</span>]
+                            
+                            <span class="ruby-ivar">@sauvegarde</span>.<span class="ruby-identifier">sauvegardeToi</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">$temps</span>)
+
+                            <span class="ruby-keyword">if</span>((<span class="ruby-keyword">self</span>.<span class="ruby-identifier">grilleFini?</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">$window</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>))
+                                                    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rendreImage</span>
+                                                    <span class="ruby-ivar">@undo</span>.<span class="ruby-identifier">clear</span>
+                                                    <span class="ruby-ivar">@redo</span>.<span class="ruby-identifier">clear</span>
+                                                    <span class="ruby-constant">Victoire</span>.<span class="ruby-identifier">creer</span>(<span class="ruby-ivar">@lignes</span>, <span class="ruby-ivar">@colonnes</span>, <span class="ruby-ivar">@difficulte</span>, <span class="ruby-ivar">@niveau</span>)
+                                                    <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@difficulte</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;niv1&quot;</span>)
+                                                            <span class="ruby-identifier">image1</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;./images/facile.png&quot;</span>)
+                                                <span class="ruby-comment">#image1.show()</span>
+                                                            <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>)
+                                                                    <span class="ruby-identifier">$btn_grille1_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                                                                    <span class="ruby-identifier">$btn_grille2_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>)
+                                                                    <span class="ruby-identifier">$btn_grille3_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span>)
+                                                                    <span class="ruby-identifier">$btn_grille4_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span>)
+                                                                    <span class="ruby-identifier">$btn_grille5_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">6</span>)
+                                                                    <span class="ruby-identifier">$btn_grille6_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                                    <span class="ruby-identifier">$btn_grille7_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                                    <span class="ruby-identifier">$btn_grille8_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                                    <span class="ruby-identifier">$btn_grille9_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">end</span>
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@difficulte</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;niv2&quot;</span>)
+                                                            <span class="ruby-identifier">image2</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;./images/moyen.png&quot;</span>)
+                                                            <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>)
+                                                                    <span class="ruby-identifier">$btn_grille1_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                                                                    <span class="ruby-identifier">$btn_grille2_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>)
+                                                                    <span class="ruby-identifier">$btn_grille3_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span>)
+                                                                    <span class="ruby-identifier">$btn_grille4_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span>)
+                                                                    <span class="ruby-identifier">$btn_grille5_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">6</span>)
+                                                                    <span class="ruby-identifier">$btn_grille6_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                                    <span class="ruby-identifier">$btn_grille7_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                                    <span class="ruby-identifier">$btn_grille8_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                                    <span class="ruby-identifier">$btn_grille9_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                            <span class="ruby-keyword">end</span>
+                                                    <span class="ruby-keyword">else</span>
+                                                            <span class="ruby-identifier">image3</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;./images/difficile.png&quot;</span>)
+                                                            <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>)
+                                                                    <span class="ruby-identifier">$btn_grille1_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                                                                    <span class="ruby-identifier">$btn_grille2_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>)
+                                                                    <span class="ruby-identifier">$btn_grille3_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span>)
+                                                                    <span class="ruby-identifier">$btn_grille4_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span>)
+                                                                    <span class="ruby-identifier">$btn_grille5_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">6</span>)
+                                                                    <span class="ruby-identifier">$btn_grille6_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                                    <span class="ruby-identifier">$btn_grille7_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                                    <span class="ruby-identifier">$btn_grille8_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                                    <span class="ruby-identifier">$btn_grille9_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                            <span class="ruby-keyword">end</span>
+                                                    <span class="ruby-keyword">end</span>
+                            <span class="ruby-keyword">elsif</span>((<span class="ruby-keyword">self</span>.<span class="ruby-identifier">grilleFini?</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">$window</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>))
+                                                    <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@difficulte</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;niv1&quot;</span>)
+                                                            <span class="ruby-identifier">image1</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;./images/facile.png&quot;</span>)
+                                                            <span class="ruby-comment">#image1.show()</span>
+                                                            <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>)
+                                                                    <span class="ruby-identifier">$btn_grille1_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                                                                    <span class="ruby-identifier">$btn_grille2_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>)
+                                                                    <span class="ruby-identifier">$btn_grille3_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span>)
+                                                                    <span class="ruby-identifier">$btn_grille4_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span>)
+                                                                    <span class="ruby-identifier">$btn_grille5_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">6</span>)
+                                                                    <span class="ruby-identifier">$btn_grille6_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                                    <span class="ruby-identifier">$btn_grille7_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                                    <span class="ruby-identifier">$btn_grille8_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                                    <span class="ruby-identifier">$btn_grille9_facile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image1</span>)
+                                                            <span class="ruby-keyword">end</span>
+                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@difficulte</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;niv2&quot;</span>)
+                                                    <span class="ruby-identifier">image2</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;./images/moyen.png&quot;</span>)
+                                                    <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>)
+                                                            <span class="ruby-identifier">$btn_grille1_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                                                            <span class="ruby-identifier">$btn_grille2_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>)
+                                                            <span class="ruby-identifier">$btn_grille3_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span>)
+                                                            <span class="ruby-identifier">$btn_grille4_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span>)
+                                                            <span class="ruby-identifier">$btn_grille5_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">6</span>)
+                                                            <span class="ruby-identifier">$btn_grille6_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                            <span class="ruby-identifier">$btn_grille7_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                            <span class="ruby-identifier">$btn_grille8_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                            <span class="ruby-identifier">$btn_grille9_moyenne</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image2</span>)
+                                                    <span class="ruby-keyword">end</span>
+                                            <span class="ruby-keyword">else</span>
+                                                    <span class="ruby-identifier">image3</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;./images/difficile.png&quot;</span>)
+                                                    <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>)
+                                                            <span class="ruby-identifier">$btn_grille1_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                                                            <span class="ruby-identifier">$btn_grille2_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">3</span>)
+                                                            <span class="ruby-identifier">$btn_grille3_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">4</span>)
+                                                            <span class="ruby-identifier">$btn_grille4_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span>)
+                                                            <span class="ruby-identifier">$btn_grille5_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">6</span>)
+                                                            <span class="ruby-identifier">$btn_grille6_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                            <span class="ruby-identifier">$btn_grille7_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                            <span class="ruby-identifier">$btn_grille8_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                    <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@niveau</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                            <span class="ruby-identifier">$btn_grille9_difficile</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">image3</span>)
+                                                    <span class="ruby-keyword">end</span>
+                                            <span class="ruby-keyword">end</span>
+                                                    <span class="ruby-keyword">self</span>.<span class="ruby-identifier">rendreImage</span>
+                            <span class="ruby-keyword">end</span>
+
+          <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-appelRedo" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">appelRedo</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>redo un coup qui a déjà été joué</p>
+
+          <div class="method-source-code" id="appelRedo-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">appelRedo</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-ivar">@redo</span>.<span class="ruby-identifier">empty?</span>)
+                <span class="ruby-identifier">lienRedo</span> = <span class="ruby-ivar">@redo</span>.<span class="ruby-identifier">pop</span>
+                <span class="ruby-identifier">n1</span> = <span class="ruby-identifier">lienRedo</span>[<span class="ruby-value">0</span>]
+                <span class="ruby-identifier">n2</span> = <span class="ruby-identifier">lienRedo</span>[<span class="ruby-value">1</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">lienRedo</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;s&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lienRedo</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;1st&#39;</span>
+                        <span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>, <span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">supprimeLien</span>(<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>, <span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-ivar">@undo</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">lienRedo</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-appelUndo" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">appelUndo</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>undo un coup qui a déjà été joué</p>
+
+          <div class="method-source-code" id="appelUndo-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">appelUndo</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-ivar">@undo</span>.<span class="ruby-identifier">empty?</span>)
+                <span class="ruby-identifier">lienUndo</span> = <span class="ruby-ivar">@undo</span>.<span class="ruby-identifier">pop</span>
+                <span class="ruby-identifier">n1</span> = <span class="ruby-identifier">lienUndo</span>[<span class="ruby-value">0</span>]
+                <span class="ruby-identifier">n2</span> = <span class="ruby-identifier">lienUndo</span>[<span class="ruby-value">1</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">lienUndo</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;s&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lienUndo</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;1st&#39;</span>
+                        <span class="ruby-identifier">supprimeLien</span>(<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>, <span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>, <span class="ruby-keyword">true</span>)
+                <span class="ruby-keyword">end</span>
+                <span class="ruby-ivar">@redo</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">lienUndo</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-chargeGrille" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">chargeGrille</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Chargement d’une grille depuis un fichier</p>
+
+          <div class="method-source-code" id="chargeGrille-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 684</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">chargeGrille</span>()
+            <span class="ruby-comment">#je vérifie la difficulte pour arriver au bon dossier où se trouve ma grille</span>
+            <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@difficulte</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;niv1&quot;</span>) <span class="ruby-keyword">then</span>
+                    <span class="ruby-identifier">diff</span> = <span class="ruby-string">&quot;Facile&quot;</span>
+            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@difficulte</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;niv2&quot;</span>) <span class="ruby-keyword">then</span>
+                    <span class="ruby-identifier">diff</span> = <span class="ruby-string">&quot;Moyenne&quot;</span>
+            <span class="ruby-keyword">else</span>
+                    <span class="ruby-identifier">diff</span> = <span class="ruby-string">&quot;Difficile&quot;</span>
+            <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">data</span> = []<span class="ruby-comment">#va contenir les lignes de la grille.txt</span>
+                            <span class="ruby-identifier">nom_fich</span> = <span class="ruby-node">&quot;grille_ressources/#{diff}/#{@nomGrille}&quot;</span>
+
+            <span class="ruby-comment">#Parcours de la grille.txt et chaque ligne est mit dans le tableau</span>
+            <span class="ruby-constant">File</span>.<span class="ruby-identifier">foreach</span>(<span class="ruby-identifier">nom_fich</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">data</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Chargements des noeuds et des liens</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">length</span>() <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+        <span class="ruby-identifier">data</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;:&#39;</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">caseGrille</span>, <span class="ruby-identifier">ind</span><span class="ruby-operator">|</span>
+            <span class="ruby-comment"># # Création d&#39;une case</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-identifier">caseGrille</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;0&#39;</span>
+                <span class="ruby-identifier">btn</span> = <span class="ruby-constant">Noeud</span>.<span class="ruby-identifier">creer</span>(<span class="ruby-keyword">self</span>, <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">caseGrille</span>),<span class="ruby-identifier">i</span>,<span class="ruby-identifier">ind</span>)
+                <span class="ruby-ivar">@tabNoeuds</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">btn</span>
+            <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">btn</span> = <span class="ruby-constant">Lien</span>.<span class="ruby-identifier">creer</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">i</span>, <span class="ruby-identifier">ind</span>)
+            <span class="ruby-keyword">end</span>
+
+            <span class="ruby-comment">#Attacher le noeud ou le lien à la grille</span>
+            <span class="ruby-keyword">self</span>.<span class="ruby-identifier">attach</span>(<span class="ruby-identifier">btn</span>, <span class="ruby-identifier">ind</span>,<span class="ruby-identifier">i</span>, <span class="ruby-value">1</span>, <span class="ruby-value">1</span>)
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+            
+            <span class="ruby-keyword">self</span>.<span class="ruby-identifier">remplirVoisins</span>() <span class="ruby-comment">#Rempli les voisins des noeuds</span>
+
+            <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@chargement</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>) <span class="ruby-keyword">then</span> <span class="ruby-comment">#Si il y a une sauvegarde j&#39;utilise cette méthode pour charger la sauvegarde</span>
+                    <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@hypothese</span> <span class="ruby-operator">!=</span><span class="ruby-keyword">true</span>) <span class="ruby-comment">#Si c&#39;est une hypothese j&#39;utilise cette méthode pour charger la sauvegarde de l&#39;hypothese</span>
+                            <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier">chargeLaGrille</span>(<span class="ruby-keyword">self</span>)
+                    <span class="ruby-keyword">else</span> 
+                            <span class="ruby-constant">Sauvegarde</span>.<span class="ruby-identifier">chargeLaGrilleHypo</span>(<span class="ruby-keyword">self</span>)
+                    <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-clickReaction" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">clickReaction</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Methode qui reagit lorsqu’on clique sur une case</p>
+
+          <div class="method-source-code" id="clickReaction-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">clickReaction</span>()
+                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">lignes</span><span class="ruby-value">-1</span>)
+                                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">colonnes</span><span class="ruby-value">-1</span>)
+                                                        <span class="ruby-keyword">if</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;n&#39;</span>)
+                                                                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x</span>).<span class="ruby-identifier">set_image</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x</span>).<span class="ruby-identifier">image</span>)
+                                                        <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+
+<span class="ruby-ivar">@deuxNoeuds</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">choixPossible</span>()
+<span class="ruby-keyword">if</span>( <span class="ruby-ivar">@deuxNoeuds</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span> )
+    <span class="ruby-ivar">@deuxNoeuds</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">annulerChoixPossible</span>()
+
+    <span class="ruby-identifier">l2</span> = <span class="ruby-ivar">@deuxNoeuds</span>.<span class="ruby-identifier">pop</span>()
+    <span class="ruby-identifier">l1</span> = <span class="ruby-ivar">@deuxNoeuds</span>.<span class="ruby-identifier">pop</span>()
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">lienValide?</span>(<span class="ruby-identifier">l1</span>,<span class="ruby-identifier">l2</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>
+        <span class="ruby-identifier">ajoutLien</span>(<span class="ruby-identifier">l1</span>,<span class="ruby-identifier">l2</span>,<span class="ruby-keyword">false</span>)
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-grilleFini-3F" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">grilleFini?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Vérifie si la grille est fini et a été correctement remplis</p>
+
+          <div class="method-source-code" id="grilleFini-3F-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 103</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">grilleFini?</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">lig</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@lignes</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">col</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-ivar">@colonnes</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+            <span class="ruby-identifier">noeud</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">col</span>,<span class="ruby-identifier">lig</span>)
+            <span class="ruby-keyword">if</span> (<span class="ruby-identifier">noeud</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;n&#39;</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">noeud</span>.<span class="ruby-identifier">estComplet?</span>
+                    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-lesLiensEntre" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">lesLiensEntre</span><span
+            class="method-args">(n1, n2)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Renvoie un tableau contenant les cases separant deux noeuds</p>
+
+          <div class="method-source-code" id="lesLiensEntre-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 624</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lesLiensEntre</span>(<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>)
+    <span class="ruby-identifier">cases</span> = []
+
+    <span class="ruby-comment"># Noeud voisin en haut</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nHaut</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+
+            <span class="ruby-keyword">for</span> <span class="ruby-identifier">lig</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>)
+                    <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">lig</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                        <span class="ruby-keyword">break</span>;
+                                                                    <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">lig</span>).<span class="ruby-identifier">setDirection</span>(<span class="ruby-string">&#39;v&#39;</span>)
+                        <span class="ruby-identifier">cases</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">lig</span>)
+                    <span class="ruby-keyword">end</span>
+                                    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># Noeud voisin à droite</span>
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+
+            <span class="ruby-keyword">for</span> <span class="ruby-identifier">col</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>).<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@colonnes</span><span class="ruby-value">-1</span>)
+                    <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">col</span>, <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                        <span class="ruby-keyword">break</span>;
+                                                                    <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">col</span>, <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>).<span class="ruby-identifier">setDirection</span>(<span class="ruby-string">&#39;h&#39;</span>)
+                        <span class="ruby-identifier">cases</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">col</span>, <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>)
+                    <span class="ruby-keyword">end</span>
+                                    <span class="ruby-keyword">end</span>
+            <span class="ruby-comment"># Noeud voisin à gauche</span>
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nGauche</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">col</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>)
+            <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">col</span>, <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                <span class="ruby-keyword">break</span>;
+            <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">col</span>, <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>).<span class="ruby-identifier">setDirection</span>(<span class="ruby-string">&#39;h&#39;</span>)
+                <span class="ruby-identifier">cases</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">col</span>, <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>)
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># Noeud voisin en bas</span>
+    <span class="ruby-keyword">elsif</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nBas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">lig</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>).<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@lignes</span><span class="ruby-value">-1</span>)
+            <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">lig</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                <span class="ruby-keyword">break</span>;
+            <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">lig</span>).<span class="ruby-identifier">setDirection</span>(<span class="ruby-string">&#39;v&#39;</span>)
+               <span class="ruby-identifier">cases</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>, <span class="ruby-identifier">lig</span>)
+            <span class="ruby-keyword">end</span>
+                                            <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">cases</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-lienValide-3F" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">lienValide?</span><span
+            class="method-args">(n1, n2)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Permet de verifier si un lien entre deux noeuds peut être valide, c’est-à-dire qu’il y ait pas d’intersection avec un autre lien</p>
+
+          <div class="method-source-code" id="lienValide-3F-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 533</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lienValide?</span>(<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>)
+
+        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nHaut</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">n2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">n2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nBas</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">n2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nGauche</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">n2</span>)
+            <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">end</span>
+
+                                            <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">estComplet?</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">estComplet?</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>)
+                                                    <span class="ruby-identifier">supprimeLien</span>(<span class="ruby-identifier">n1</span>,<span class="ruby-identifier">n2</span>, <span class="ruby-keyword">false</span>)
+                                                    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                                            <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment">#Voisin en haut du noeud</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nHaut</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+            <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsHaut</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                <span class="ruby-identifier">supprimeLien</span>(<span class="ruby-identifier">n1</span>,<span class="ruby-identifier">n2</span>, <span class="ruby-keyword">false</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+            <span class="ruby-keyword">else</span>
+                    <span class="ruby-comment"># cas où les il y aurait un croisement de liens potentiel</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">x2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>)
+                    <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                        <span class="ruby-keyword">break</span>;
+                    <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>).<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;h&#39;</span>)
+                            <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                        <span class="ruby-keyword">end</span>
+                    <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment">#Voisin à droite du noeud</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+            <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsDroit</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                <span class="ruby-identifier">supprimeLien</span>(<span class="ruby-identifier">n1</span>,<span class="ruby-identifier">n2</span>, <span class="ruby-keyword">false</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+            <span class="ruby-keyword">else</span>
+                <span class="ruby-comment"># cas où les il y aurait un croisement de liens potentiel</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">y2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>).<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@lignes</span><span class="ruby-value">-1</span>)
+                    <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                        <span class="ruby-keyword">break</span>;
+                    <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>).<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;v&#39;</span>)
+                            <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                        <span class="ruby-keyword">end</span>
+                    <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment">#Voisin en bas du noeud</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nBas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+            <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsBas</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                <span class="ruby-identifier">supprimeLien</span>(<span class="ruby-identifier">n1</span>,<span class="ruby-identifier">n2</span>, <span class="ruby-keyword">false</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+            <span class="ruby-keyword">else</span>
+                    <span class="ruby-comment"># cas où les il y aurait un croisement de liens potentiel</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">x2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>).<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@colonnes</span><span class="ruby-value">-1</span>)
+                    <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                        <span class="ruby-keyword">break</span>;
+                    <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>).<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;h&#39;</span>)
+                            <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                        <span class="ruby-keyword">end</span>
+                    <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">end</span>
+
+         <span class="ruby-comment">#Voisin à gauche du noeud</span>
+         <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nGauche</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+            <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsGauche</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)
+                <span class="ruby-identifier">supprimeLien</span>(<span class="ruby-identifier">n1</span>,<span class="ruby-identifier">n2</span>, <span class="ruby-keyword">false</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+            <span class="ruby-keyword">else</span>
+                <span class="ruby-comment"># cas où les il y aurait un croisement de liens potentiel</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">y2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>)
+                    <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                        <span class="ruby-keyword">break</span>;
+                    <span class="ruby-keyword">else</span>
+                        <span class="ruby-keyword">if</span>( <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>).<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;v&#39;</span>)
+                            <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                        <span class="ruby-keyword">end</span>
+                    <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-lienValideChoixPossible-3F" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">lienValideChoixPossible?</span><span
+            class="method-args">(n1, n2)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Permet de verifier si un lien est possible entre deux noeuds pour afficher les liens possibles pour un noeud</p>
+
+          <div class="method-source-code" id="lienValideChoixPossible-3F-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 469</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lienValideChoixPossible?</span>(<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>)
+        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nHaut</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">n2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">n2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nBas</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">n2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nGauche</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">n2</span>)
+                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment">#Voisin en haut du noeud</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nHaut</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                                <span class="ruby-comment"># cas où les il y aurait un croisement de liens potentiel</span>
+                                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">x2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>)
+                                                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                                                                        <span class="ruby-keyword">break</span>;
+                                                        <span class="ruby-keyword">else</span>
+                                                                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>).<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;h&#39;</span>)
+                                                                                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                                                                        <span class="ruby-keyword">end</span>
+                                                        <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment">#Voisin à droite du noeud</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                                        <span class="ruby-comment"># cas où les il y aurait un croisement de liens potentiel</span>
+                                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">y2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>).<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@lignes</span><span class="ruby-value">-1</span>)
+                                                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                                                                        <span class="ruby-keyword">break</span>;
+                                                        <span class="ruby-keyword">else</span>
+                                                                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>).<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;v&#39;</span>)
+                                                                                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                                                                        <span class="ruby-keyword">end</span>
+                                                        <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-comment">#Voisin en bas du noeud</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nBas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                                        <span class="ruby-comment"># cas où les il y aurait un croisement de liens potentiel</span>
+                                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">x2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>).<span class="ruby-identifier">upto</span>(<span class="ruby-ivar">@colonnes</span><span class="ruby-value">-1</span>)
+                                                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                                                                        <span class="ruby-keyword">break</span>;
+                                                        <span class="ruby-keyword">else</span>
+                                                                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>).<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;h&#39;</span>)
+                                                                                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                                                                        <span class="ruby-keyword">end</span>
+                                                        <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+
+         <span class="ruby-comment">#Voisin à gauche du noeud</span>
+         <span class="ruby-keyword">if</span>(<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nGauche</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                                        <span class="ruby-comment"># cas où les il y aurait un croisement de liens potentiel</span>
+                                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">y2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">y</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>)
+                                                        <span class="ruby-keyword">if</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>)
+                                                                        <span class="ruby-keyword">break</span>;
+                                                        <span class="ruby-keyword">else</span>
+                                                                        <span class="ruby-keyword">if</span>( <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">n1</span>.<span class="ruby-identifier">x</span>).<span class="ruby-identifier">direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;v&#39;</span>)
+                                                                                        <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+                                                                        <span class="ruby-keyword">end</span>
+                                                        <span class="ruby-keyword">end</span>
+                                        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-notification" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">notification</span><span
+            class="method-args">(unNoeud)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Méthode permettant de notifier la grille qu’on a cliqué sur un noeud</p>
+
+          <div class="method-source-code" id="notification-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">notification</span>(<span class="ruby-identifier">unNoeud</span>)
+    <span class="ruby-ivar">@deuxNoeuds</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">unNoeud</span>
+    <span class="ruby-identifier">clickReaction</span>()
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-remplirVoisins" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">remplirVoisins</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Charge tout les voisins d’un noeuds dans les VI de la classe <a href="Noeud.html"><code>Noeud</code></a> “nGauche”,“nDroit”, “nHaut” et “nBas”</p>
+
+          <div class="method-source-code" id="remplirVoisins-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 425</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">remplirVoisins</span>
+    <span class="ruby-keyword">for</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">lignes</span><span class="ruby-value">-1</span>)
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">colonnes</span><span class="ruby-value">-1</span>)
+            <span class="ruby-keyword">if</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;n&#39;</span>)
+
+                <span class="ruby-comment"># DROITE</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">y2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>).<span class="ruby-identifier">upto</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">colonnes</span><span class="ruby-value">-1</span>)
+                    <span class="ruby-keyword">if</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>, <span class="ruby-identifier">x</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;n&#39;</span>)
+                        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>).<span class="ruby-identifier">nDroit</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">x</span>)
+                        <span class="ruby-keyword">break</span>
+                    <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-comment">#BAS</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">x2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>).<span class="ruby-identifier">upto</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">lignes</span><span class="ruby-value">-1</span>)
+                    <span class="ruby-keyword">if</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;n&#39;</span>)
+                        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x</span>).<span class="ruby-identifier">nBas</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>)
+                        <span class="ruby-keyword">break</span>
+                    <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-comment">#HAUT</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">x2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">x</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>)
+                    <span class="ruby-keyword">if</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;n&#39;</span>)
+                        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x</span>).<span class="ruby-identifier">nHaut</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x2</span>)
+                        <span class="ruby-keyword">break</span>
+                    <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-comment"># Gauche</span>
+                <span class="ruby-keyword">for</span> <span class="ruby-identifier">y2</span> <span class="ruby-keyword">in</span> (<span class="ruby-identifier">y</span><span class="ruby-value">-1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>)
+                    <span class="ruby-keyword">if</span> (<span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">x</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;n&#39;</span>)
+                        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x</span>).<span class="ruby-identifier">nGauche</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y2</span>,<span class="ruby-identifier">x</span>)
+                        <span class="ruby-keyword">break</span>
+                    <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-rendreImage" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">rendreImage</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Rendre toute la grille non cliquable la grille Ceci arrive lorsque vous avez terminé une grille</p>
+
+          <div class="method-source-code" id="rendreImage-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">rendreImage</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">lignes</span><span class="ruby-value">-1</span>)
+                        <span class="ruby-keyword">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">colonnes</span><span class="ruby-value">-1</span>)
+                                <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>).<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;n&#39;</span>
+                                        <span class="ruby-comment">#image1 = Gtk::Image.new(:file =&gt; &quot;./images/Noeud/facile.png&quot;)</span>
+                                        <span class="ruby-comment">#image1.show()</span>
+                                        <span class="ruby-comment">#self.get_child_at(y, x).image.from_file = &quot;./images/Noeud/#{self.get_child_at(y, x).nbLiens}.jpg&quot;</span>
+                                        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>).<span class="ruby-identifier">set_sensitive</span>(<span class="ruby-keyword">false</span>)
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-setChargement" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">setChargement</span><span
+            class="method-args">(chargement)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Méthode qui permet de savoir si il y a une sauvegarde de la grille</p>
+
+          <div class="method-source-code" id="setChargement-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 675</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">setChargement</span>(<span class="ruby-identifier">chargement</span>)
+        <span class="ruby-ivar">@chargement</span>=<span class="ruby-identifier">chargement</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-setHypothese" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">setHypothese</span><span
+            class="method-args">(hypo)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Méthode qui permet de savoir si c’est une hypothese</p>
+
+          <div class="method-source-code" id="setHypothese-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 680</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">setHypothese</span>(<span class="ruby-identifier">hypo</span>)
+        <span class="ruby-ivar">@hypothese</span> = <span class="ruby-identifier">hypo</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-supprimeLien" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">supprimeLien</span><span
+            class="method-args">(n1, n2, undoRedoVal)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Supprime un lien entre deux noeuds</p>
+
+          <div class="method-source-code" id="supprimeLien-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 381</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">supprimeLien</span>(<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>, <span class="ruby-identifier">undoRedoVal</span>)
+    <span class="ruby-comment"># Stockage dans la variable liens les cases separant deux noeuds</span>
+    <span class="ruby-identifier">liens</span> = <span class="ruby-identifier">lesLiensEntre</span>(<span class="ruby-identifier">n1</span>,<span class="ruby-identifier">n2</span>)
+
+    <span class="ruby-comment">#maj() des liens</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nHaut</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span> <span class="ruby-comment">#cas noeud haut</span>
+                                    <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsHaut</span> = <span class="ruby-value">0</span>
+                                    <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsBas</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span>  <span class="ruby-comment">#cas noeud droit</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsDroit</span> = <span class="ruby-value">0</span>
+                                            <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsGauche</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nGauche</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span> <span class="ruby-comment">#cas noeud gauche</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsGauche</span> = <span class="ruby-value">0</span>
+                                            <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsDroit</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nBas</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">n2</span> <span class="ruby-comment">#cas noeud bas</span>
+        <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">nbNoeudsBas</span> = <span class="ruby-value">0</span>
+                                            <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">nbNoeudsHaut</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">print</span>(<span class="ruby-string">&quot;pas de lien entre n1 et n2&quot;</span>)
+                            <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># Suppression du lien</span>
+    <span class="ruby-identifier">liens</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">lien</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">lien</span>.<span class="ruby-identifier">effacerTout</span>()
+                                            <span class="ruby-comment">#lien.setDirection(&quot;&quot;)</span>
+        <span class="ruby-identifier">lien</span>.<span class="ruby-identifier">maj</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">majNbLiensCourant</span>
+    <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">majNbLiensCourant</span>
+    <span class="ruby-identifier">n1</span>.<span class="ruby-identifier">maj</span>
+    <span class="ruby-identifier">n2</span>.<span class="ruby-identifier">maj</span>
+
+                            <span class="ruby-keyword">if</span> <span class="ruby-identifier">undoRedoVal</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>
+                                    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+                            <span class="ruby-keyword">end</span>
+                            <span class="ruby-ivar">@undo</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">n1</span>, <span class="ruby-identifier">n2</span>, <span class="ruby-string">&#39;a&#39;</span>, <span class="ruby-string">&#39;1st&#39;</span>]
+
+                            <span class="ruby-ivar">@sauvegarde</span>.<span class="ruby-identifier">sauvegardeToi</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">$temps</span>)
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-verifierGrille" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">verifierGrille</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Verifier l’état de la grille, si il y’a dans</p>
+
+          <div class="method-source-code" id="verifierGrille-source">
+            <pre><span class="ruby-comment"># File Hashi/Grille.rb, line 118</span>
+          <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">verifierGrille</span>
+                  <span class="ruby-identifier">grilleComplete</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">readlines</span>(<span class="ruby-node">&quot;./grille_complete/#{@difficulte}/grille#{@niveau}.txt&quot;</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">str</span><span class="ruby-operator">|</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;:&quot;</span>) }
+                  <span class="ruby-identifier">tableauxDeNoeud</span> = []
+                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">lignes</span><span class="ruby-value">-1</span>)
+                                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">colonnes</span><span class="ruby-value">-1</span>)
+                                                  <span class="ruby-identifier">caseGrille</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_child_at</span>(<span class="ruby-identifier">y</span>,<span class="ruby-identifier">x</span>)
+                                                  <span class="ruby-keyword">if</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;n&#39;</span> <span class="ruby-keyword">then</span>
+                                                          <span class="ruby-keyword">if</span>(<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nDroit</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span>
+                                                                  <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;-&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsDroit</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>))
+                                                                                  <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                                  <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nDroit</span>
+                                                                  <span class="ruby-keyword">elsif</span> ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;-&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">estComplet?</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsDroit</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>))
+                                                                                  <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                  <span class="ruby-keyword">elsif</span> ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;=&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">estComplet?</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsDroit</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>))
+                                                                                  <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                  <span class="ruby-keyword">elsif</span> ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;=&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">estComplet?</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsDroit</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>))
+                                                                                  <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                                  <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nDroit</span>
+                                                                  <span class="ruby-keyword">elsif</span> ( ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;|&#39;</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span>][<span class="ruby-identifier">y</span><span class="ruby-value">+1</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;H&#39;</span>)) <span class="ruby-operator">&amp;&amp;</span> ((<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsDroit</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsDroit</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)))
+                                                                                  <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                                  <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nDroit</span>
+                                                                  <span class="ruby-keyword">end</span>
+                                                          <span class="ruby-keyword">end</span>
+                                                          <span class="ruby-keyword">if</span>(<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nBas</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>)
+                                                                          <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;|&quot;</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsBas</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>))
+                                                                                          <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                                          <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nBas</span>
+                                                                          <span class="ruby-keyword">elsif</span> ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;|&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">estComplet?</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsBas</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>))
+                                                                                          <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                          <span class="ruby-keyword">elsif</span> ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;H&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">estComplet?</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsBas</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>))
+                                                                                          <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                          <span class="ruby-keyword">elsif</span> ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;H&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">estComplet?</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsBas</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>))
+                                                                                          <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                                          <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nBas</span>
+                                                                          <span class="ruby-keyword">elsif</span> ( ((<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;-&#39;</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">grilleComplete</span>[<span class="ruby-identifier">x</span><span class="ruby-value">+1</span>][<span class="ruby-identifier">y</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;=&#39;</span>)) <span class="ruby-operator">&amp;&amp;</span> ((<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsBas</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nbNoeudsBas</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>)))
+                                                                                          <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>
+                                                                                          <span class="ruby-identifier">tableauxDeNoeud</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">caseGrille</span>.<span class="ruby-identifier">nBas</span>
+                                                                          <span class="ruby-keyword">end</span>
+                                                          <span class="ruby-keyword">end</span>
+                                                  <span class="ruby-keyword">end</span>
+                                  <span class="ruby-keyword">end</span>
+                  <span class="ruby-keyword">end</span>
+
+                  <span class="ruby-keyword">for</span> <span class="ruby-identifier">noeud</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">tableauxDeNoeud</span>
+    <span class="ruby-identifier">noeud</span>.<span class="ruby-identifier">brillerOrange</span>
+<span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

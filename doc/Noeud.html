@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Noeud - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link">Gtk::Button
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-creer">::creer</a>
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-annulerChoixPossible">#annulerChoixPossible</a>
+    <li ><a href="#method-i-brillerOrange">#brillerOrange</a>
+    <li ><a href="#method-i-choixPossible">#choixPossible</a>
+    <li ><a href="#method-i-cliquerSurNoeud">#cliquerSurNoeud</a>
+    <li ><a href="#method-i-decrementeLiens">#decrementeLiens</a>
+    <li ><a href="#method-i-estComplet-3F">#estComplet?</a>
+    <li ><a href="#method-i-estRelieVoisins-3F">#estRelieVoisins?</a>
+    <li ><a href="#method-i-incrementeLiens">#incrementeLiens</a>
+    <li ><a href="#method-i-lienLiees">#lienLiees</a>
+    <li ><a href="#method-i-liensRestants">#liensRestants</a>
+    <li ><a href="#method-i-maj">#maj</a>
+    <li ><a href="#method-i-majNbLiensCourant">#majNbLiensCourant</a>
+    <li ><a href="#method-i-nbVoisinsDeuxLien">#nbVoisinsDeuxLien</a>
+    <li ><a href="#method-i-nbVoisinsNComplets">#nbVoisinsNComplets</a>
+    <li ><a href="#method-i-nbVoisinsUnLien">#nbVoisinsUnLien</a>
+    <li ><a href="#method-i-nbVoisinsZeroLien">#nbVoisinsZeroLien</a>
+    <li ><a href="#method-i-noeudVoisins">#noeudVoisins</a>
+    <li ><a href="#method-i-surbriller">#surbriller</a>
+    <li ><a href="#method-i-voisinsNonComplets">#voisinsNonComplets</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Noeud">
+  <h1 id="class-Noeud" class="class">
+    class Noeud
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      <div id="attribute-i-grille" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">grille</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un noeud connait ses coordonnées en x et y, le nb de lien qu’il doit avoir, le nb de lien qu’il a à un moment donnée. grille : la grille sur laquelle sera placé le noeud @x : l’abcisse du noeud dans la grille @y : l’ordonnee du noeud dans la grille @statut : un caractere : ‘n’ signifie que c’est un noeud, ‘l’ signifie que c’est un lien @nbLiens : le nombre de lien à faire relier sur un noeud @nbLiensCourant : le nombre de lien courant relié à un noeud @nGauche : le noeud voisin gauche d’un noeud @nDroit : le noeud voisin droit d’un noeud @nBas : le noeud voisin en bas d’un noeud @nHaut : le noeud voisin en haut d’un noeud @nbNoeudsGauche : le nombre de liens entre un noeud et son noeud voisin gauche(s’il existe) @nbNoeudsDroit : le nombre de liens entre un noeud et son noeud voisin droit(s’il existe) @nbNoeudsBas : le nombre de liens entre un noeud et son noeud voisin au sud(s’il existe) @nbNoeudsHaut : le nombre de liens entre un noeud et son noeud voisin au nord(s’il existe) Il connait aussi ses noeuds gauche, droit, haut et bas. Il est capable de montrer tout les liens possibles à partir de ce noeud.</p>
+        </div>
+      </div>
+      <div id="attribute-i-image" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">image</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-nBas" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nBas</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-nDroit" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nDroit</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-nGauche" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nGauche</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-nHaut" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nHaut</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-nbLiens" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nbLiens</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un noeud connait ses coordonnées en x et y, le nb de lien qu’il doit avoir, le nb de lien qu’il a à un moment donnée. grille : la grille sur laquelle sera placé le noeud @x : l’abcisse du noeud dans la grille @y : l’ordonnee du noeud dans la grille @statut : un caractere : ‘n’ signifie que c’est un noeud, ‘l’ signifie que c’est un lien @nbLiens : le nombre de lien à faire relier sur un noeud @nbLiensCourant : le nombre de lien courant relié à un noeud @nGauche : le noeud voisin gauche d’un noeud @nDroit : le noeud voisin droit d’un noeud @nBas : le noeud voisin en bas d’un noeud @nHaut : le noeud voisin en haut d’un noeud @nbNoeudsGauche : le nombre de liens entre un noeud et son noeud voisin gauche(s’il existe) @nbNoeudsDroit : le nombre de liens entre un noeud et son noeud voisin droit(s’il existe) @nbNoeudsBas : le nombre de liens entre un noeud et son noeud voisin au sud(s’il existe) @nbNoeudsHaut : le nombre de liens entre un noeud et son noeud voisin au nord(s’il existe) Il connait aussi ses noeuds gauche, droit, haut et bas. Il est capable de montrer tout les liens possibles à partir de ce noeud.</p>
+        </div>
+      </div>
+      <div id="attribute-i-nbLiensCourant" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nbLiensCourant</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un noeud connait ses coordonnées en x et y, le nb de lien qu’il doit avoir, le nb de lien qu’il a à un moment donnée. grille : la grille sur laquelle sera placé le noeud @x : l’abcisse du noeud dans la grille @y : l’ordonnee du noeud dans la grille @statut : un caractere : ‘n’ signifie que c’est un noeud, ‘l’ signifie que c’est un lien @nbLiens : le nombre de lien à faire relier sur un noeud @nbLiensCourant : le nombre de lien courant relié à un noeud @nGauche : le noeud voisin gauche d’un noeud @nDroit : le noeud voisin droit d’un noeud @nBas : le noeud voisin en bas d’un noeud @nHaut : le noeud voisin en haut d’un noeud @nbNoeudsGauche : le nombre de liens entre un noeud et son noeud voisin gauche(s’il existe) @nbNoeudsDroit : le nombre de liens entre un noeud et son noeud voisin droit(s’il existe) @nbNoeudsBas : le nombre de liens entre un noeud et son noeud voisin au sud(s’il existe) @nbNoeudsHaut : le nombre de liens entre un noeud et son noeud voisin au nord(s’il existe) Il connait aussi ses noeuds gauche, droit, haut et bas. Il est capable de montrer tout les liens possibles à partir de ce noeud.</p>
+        </div>
+      </div>
+      <div id="attribute-i-nbNoeudsBas" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nbNoeudsBas</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-nbNoeudsDroit" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nbNoeudsDroit</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-nbNoeudsGauche" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nbNoeudsGauche</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-nbNoeudsHaut" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nbNoeudsHaut</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-status" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">status</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un noeud connait ses coordonnées en x et y, le nb de lien qu’il doit avoir, le nb de lien qu’il a à un moment donnée. grille : la grille sur laquelle sera placé le noeud @x : l’abcisse du noeud dans la grille @y : l’ordonnee du noeud dans la grille @statut : un caractere : ‘n’ signifie que c’est un noeud, ‘l’ signifie que c’est un lien @nbLiens : le nombre de lien à faire relier sur un noeud @nbLiensCourant : le nombre de lien courant relié à un noeud @nGauche : le noeud voisin gauche d’un noeud @nDroit : le noeud voisin droit d’un noeud @nBas : le noeud voisin en bas d’un noeud @nHaut : le noeud voisin en haut d’un noeud @nbNoeudsGauche : le nombre de liens entre un noeud et son noeud voisin gauche(s’il existe) @nbNoeudsDroit : le nombre de liens entre un noeud et son noeud voisin droit(s’il existe) @nbNoeudsBas : le nombre de liens entre un noeud et son noeud voisin au sud(s’il existe) @nbNoeudsHaut : le nombre de liens entre un noeud et son noeud voisin au nord(s’il existe) Il connait aussi ses noeuds gauche, droit, haut et bas. Il est capable de montrer tout les liens possibles à partir de ce noeud.</p>
+        </div>
+      </div>
+      <div id="attribute-i-type" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">type</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un noeud connait ses coordonnées en x et y, le nb de lien qu’il doit avoir, le nb de lien qu’il a à un moment donnée. grille : la grille sur laquelle sera placé le noeud @x : l’abcisse du noeud dans la grille @y : l’ordonnee du noeud dans la grille @statut : un caractere : ‘n’ signifie que c’est un noeud, ‘l’ signifie que c’est un lien @nbLiens : le nombre de lien à faire relier sur un noeud @nbLiensCourant : le nombre de lien courant relié à un noeud @nGauche : le noeud voisin gauche d’un noeud @nDroit : le noeud voisin droit d’un noeud @nBas : le noeud voisin en bas d’un noeud @nHaut : le noeud voisin en haut d’un noeud @nbNoeudsGauche : le nombre de liens entre un noeud et son noeud voisin gauche(s’il existe) @nbNoeudsDroit : le nombre de liens entre un noeud et son noeud voisin droit(s’il existe) @nbNoeudsBas : le nombre de liens entre un noeud et son noeud voisin au sud(s’il existe) @nbNoeudsHaut : le nombre de liens entre un noeud et son noeud voisin au nord(s’il existe) Il connait aussi ses noeuds gauche, droit, haut et bas. Il est capable de montrer tout les liens possibles à partir de ce noeud.</p>
+        </div>
+      </div>
+      <div id="attribute-i-x" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">x</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un noeud connait ses coordonnées en x et y, le nb de lien qu’il doit avoir, le nb de lien qu’il a à un moment donnée. grille : la grille sur laquelle sera placé le noeud @x : l’abcisse du noeud dans la grille @y : l’ordonnee du noeud dans la grille @statut : un caractere : ‘n’ signifie que c’est un noeud, ‘l’ signifie que c’est un lien @nbLiens : le nombre de lien à faire relier sur un noeud @nbLiensCourant : le nombre de lien courant relié à un noeud @nGauche : le noeud voisin gauche d’un noeud @nDroit : le noeud voisin droit d’un noeud @nBas : le noeud voisin en bas d’un noeud @nHaut : le noeud voisin en haut d’un noeud @nbNoeudsGauche : le nombre de liens entre un noeud et son noeud voisin gauche(s’il existe) @nbNoeudsDroit : le nombre de liens entre un noeud et son noeud voisin droit(s’il existe) @nbNoeudsBas : le nombre de liens entre un noeud et son noeud voisin au sud(s’il existe) @nbNoeudsHaut : le nombre de liens entre un noeud et son noeud voisin au nord(s’il existe) Il connait aussi ses noeuds gauche, droit, haut et bas. Il est capable de montrer tout les liens possibles à partir de ce noeud.</p>
+        </div>
+      </div>
+      <div id="attribute-i-y" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">y</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un noeud connait ses coordonnées en x et y, le nb de lien qu’il doit avoir, le nb de lien qu’il a à un moment donnée. grille : la grille sur laquelle sera placé le noeud @x : l’abcisse du noeud dans la grille @y : l’ordonnee du noeud dans la grille @statut : un caractere : ‘n’ signifie que c’est un noeud, ‘l’ signifie que c’est un lien @nbLiens : le nombre de lien à faire relier sur un noeud @nbLiensCourant : le nombre de lien courant relié à un noeud @nGauche : le noeud voisin gauche d’un noeud @nDroit : le noeud voisin droit d’un noeud @nBas : le noeud voisin en bas d’un noeud @nHaut : le noeud voisin en haut d’un noeud @nbNoeudsGauche : le nombre de liens entre un noeud et son noeud voisin gauche(s’il existe) @nbNoeudsDroit : le nombre de liens entre un noeud et son noeud voisin droit(s’il existe) @nbNoeudsBas : le nombre de liens entre un noeud et son noeud voisin au sud(s’il existe) @nbNoeudsHaut : le nombre de liens entre un noeud et son noeud voisin au nord(s’il existe) Il connait aussi ses noeuds gauche, droit, haut et bas. Il est capable de montrer tout les liens possibles à partir de ce noeud.</p>
+        </div>
+      </div>
+    </section>
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-creer" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">creer</span><span
+            class="method-args">(uneGrille, unNbDeLiens, uneAbcisse, uneOrdonnee)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="creer-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Noeud</span>.<span class="ruby-identifier ruby-title">creer</span>(<span class="ruby-identifier">uneGrille</span>, <span class="ruby-identifier">unNbDeLiens</span>, <span class="ruby-identifier">uneAbcisse</span>, <span class="ruby-identifier">uneOrdonnee</span>)
+        <span class="ruby-identifier">new</span>(<span class="ruby-identifier">uneGrille</span>, <span class="ruby-identifier">unNbDeLiens</span>, <span class="ruby-identifier">uneAbcisse</span>, <span class="ruby-identifier">uneOrdonnee</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-new" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(uneGrille, unNbDeLiens, uneAbcisse, uneOrdonnee)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 32</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">uneGrille</span>, <span class="ruby-identifier">unNbDeLiens</span>, <span class="ruby-identifier">uneAbcisse</span>, <span class="ruby-identifier">uneOrdonnee</span>)
+            <span class="ruby-keyword">super</span>()
+            <span class="ruby-ivar">@grille</span>, <span class="ruby-ivar">@nbLiens</span>, <span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span> = <span class="ruby-identifier">uneGrille</span>, <span class="ruby-identifier">unNbDeLiens</span>, <span class="ruby-identifier">uneAbcisse</span>, <span class="ruby-identifier">uneOrdonnee</span>
+            <span class="ruby-ivar">@nbLiensCourant</span> = <span class="ruby-value">0</span>
+            <span class="ruby-ivar">@nGauche</span> = <span class="ruby-keyword">nil</span>
+            <span class="ruby-ivar">@nDroit</span> = <span class="ruby-keyword">nil</span>
+            <span class="ruby-ivar">@nBas</span> = <span class="ruby-keyword">nil</span>
+            <span class="ruby-ivar">@nHaut</span> = <span class="ruby-keyword">nil</span>
+            <span class="ruby-ivar">@nbNoeudsGauche</span> = <span class="ruby-value">0</span>
+            <span class="ruby-ivar">@nbNoeudsDroit</span> = <span class="ruby-value">0</span>
+            <span class="ruby-ivar">@nbNoeudsBas</span> = <span class="ruby-value">0</span>
+            <span class="ruby-ivar">@nbNoeudsHaut</span> = <span class="ruby-value">0</span>
+            <span class="ruby-ivar">@status</span> = <span class="ruby-string">&#39;n&#39;</span>
+
+            <span class="ruby-identifier">style_context</span>.<span class="ruby-identifier">add_class</span>(<span class="ruby-string">&#39;noeud&#39;</span>)
+<span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_name</span>(<span class="ruby-string">&quot;noeud&quot;</span>)
+
+            <span class="ruby-comment"># Charge une image correspondants au noeud</span>
+            <span class="ruby-ivar">@type</span> = <span class="ruby-node">&quot;#{@nbLiens.to_s}&quot;</span>
+            <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                    <span class="ruby-identifier">nom_file</span> = <span class="ruby-string">&quot;./images/Noeud/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@nbLiens</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;.jpg&quot;</span>
+                    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">nom_file</span>)
+            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                    <span class="ruby-identifier">nom_file</span> = <span class="ruby-string">&quot;./images/Noeud/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@nbLiens</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;_moyen.jpg&quot;</span>
+                    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">nom_file</span>)
+            <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                    <span class="ruby-identifier">nom_file</span> = <span class="ruby-string">&quot;./images/Noeud/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@nbLiens</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;_difficile.jpg&quot;</span>
+                    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">nom_file</span>)
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">self</span>.<span class="ruby-identifier">style_context</span>.<span class="ruby-identifier">add_class</span>(<span class="ruby-string">&#39;noeud&#39;</span>)
+<span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-ivar">@image</span>)
+
+<span class="ruby-comment">#  Retire les contours</span>
+<span class="ruby-identifier">set_relief</span>(<span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">ReliefStyle</span><span class="ruby-operator">::</span><span class="ruby-constant">NONE</span>)
+<span class="ruby-identifier">always_show_image</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-identifier">signal_connect</span>(<span class="ruby-string">&#39;clicked&#39;</span>) { <span class="ruby-keyword">self</span>.<span class="ruby-identifier">cliquerSurNoeud</span>() }
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+      <div id="method-i-annulerChoixPossible" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">annulerChoixPossible</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="annulerChoixPossible-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 273</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">annulerChoixPossible</span>
+        <span class="ruby-identifier">voisins</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">noeudVoisins</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">voisin</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">voisins</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">voisin</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>
+                        <span class="ruby-comment">#if voisin.estComplet? == false</span>
+      <span class="ruby-identifier">voisin</span>.<span class="ruby-identifier">style_context</span>.<span class="ruby-identifier">remove_class</span>(<span class="ruby-string">&#39;possibles&#39;</span>)
+      <span class="ruby-identifier">voisin</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">voisin</span>.<span class="ruby-identifier">image</span>)
+                        <span class="ruby-comment">#end</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-brillerOrange" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">brillerOrange</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Change la couleur du noeud en orange Cette méthode est appelé</p>
+
+          <div class="method-source-code" id="brillerOrange-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 161</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">brillerOrange</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-node">&quot;#{@nbLiens.to_s}&quot;</span>)
+                <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                        <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}_orange.jpg&quot;</span>)
+                <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                        <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}moyen_orange.jpg&quot;</span>)
+                <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                        <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}difficile_orange.jpg&quot;</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                        <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}barre_orange.jpg&quot;</span>)
+                <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                        <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}barre_moyen_orange.jpg&quot;</span>)
+                <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                        <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}barre_difficile_orange.jpg&quot;</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">ima</span>)
+
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-choixPossible" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">choixPossible</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Affiche les noeuds possibles à relier au noeud self</p>
+
+          <div class="method-source-code" id="choixPossible-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">choixPossible</span>
+        <span class="ruby-identifier">voisins</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">noeudVoisins</span>
+        <span class="ruby-keyword">for</span> <span class="ruby-identifier">voisin</span> <span class="ruby-keyword">in</span> <span class="ruby-identifier">voisins</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">voisin</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lienValideChoixPossible?</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">voisin</span>)
+                        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{voisin.nbLiens.to_s}_vert.jpg&quot;</span>)
+                        <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{voisin.nbLiens.to_s}moyen_vert.jpg&quot;</span>)
+                        <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{voisin.nbLiens.to_s}difficile_vert.jpg&quot;</span>)
+                        <span class="ruby-keyword">end</span>
+                        <span class="ruby-identifier">voisin</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">ima</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-cliquerSurNoeud" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">cliquerSurNoeud</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>methode qui s’execute lorsqu’on clique sur un noeud</p>
+
+          <div class="method-source-code" id="cliquerSurNoeud-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">cliquerSurNoeud</span>()
+    <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">notification</span>(<span class="ruby-keyword">self</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-decrementeLiens" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">decrementeLiens</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>decremente le nombre de liens associé au noeud</p>
+
+          <div class="method-source-code" id="decrementeLiens-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 155</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">decrementeLiens</span>
+        <span class="ruby-ivar">@nbLiensCourant</span> = <span class="ruby-ivar">@nbLiensCourant</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-estComplet-3F" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">estComplet?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Retourne true si le noeud est complet</p>
+
+          <div class="method-source-code" id="estComplet-3F-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">estComplet?</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@nbLiens</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@nbLiensCourant</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-estRelieVoisins-3F" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">estRelieVoisins?</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Retourne true si le noeud est reliée à tout ses voisins, false sinon</p>
+
+          <div class="method-source-code" id="estRelieVoisins-3F-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">estRelieVoisins?</span>
+   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">lienLiees</span>() <span class="ruby-operator">&gt;=</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">noeudVoisins</span>().<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-incrementeLiens" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">incrementeLiens</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>incremente le nombre de liens associé au noeud</p>
+
+          <div class="method-source-code" id="incrementeLiens-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">incrementeLiens</span>
+        <span class="ruby-ivar">@nbLiensCourant</span> = <span class="ruby-ivar">@nbLiensCourant</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-lienLiees" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">lienLiees</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Renvoie le nombre de liens reliés au noeud</p>
+
+          <div class="method-source-code" id="lienLiees-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 81</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lienLiees</span>
+    <span class="ruby-identifier">nbLiens</span> = <span class="ruby-value">0</span>
+
+    <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@nHaut</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> )
+        <span class="ruby-identifier">nbLiens</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@nbNoeudsHaut</span>
+        <span class="ruby-ivar">@nbLiensCourant</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@nbNoeudsHaut</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@nGauche</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> )
+        <span class="ruby-identifier">nbLiens</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@nbNoeudsGauche</span>
+        <span class="ruby-ivar">@nbLiensCourant</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@nbNoeudsGauche</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@nHaut</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> )
+        <span class="ruby-identifier">nbLiens</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@nbNoeudsHaut</span>
+        <span class="ruby-ivar">@nbLiensCourant</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@nbNoeudsHaut</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span>( <span class="ruby-ivar">@nDroit</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span> )
+        <span class="ruby-identifier">nbLiens</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@nbNoeudsDroit</span>
+        <span class="ruby-ivar">@nbLiensCourant</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@nbNoeudsDroit</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">nbLiens</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-liensRestants" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">liensRestants</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Renvoie le nombre de liens restants à un noeud pour qu’il soit complet</p>
+
+          <div class="method-source-code" id="liensRestants-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">liensRestants</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@nbLiens</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@nbLiensCourant</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-maj" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">maj</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Met à jour le noeud</p>
+
+          <div class="method-source-code" id="maj-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 223</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">maj</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">estComplet?</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">true</span>
+                                            <span class="ruby-ivar">@type</span> = <span class="ruby-node">&quot;#{@nbLiens.to_s}_barre&quot;</span>
+                                            <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}_barre.jpg&quot;</span>)
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>)
+                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}moyen_barre.jpg&quot;</span>)
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>)
+                                            <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}difficile_barre.jpg&quot;</span>)
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>)
+                                            <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+                                            <span class="ruby-ivar">@type</span> = <span class="ruby-node">&quot;#{@nbLiens.to_s}&quot;</span>
+                                            <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}.jpg&quot;</span>)
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>)
+                                            <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}_moyen.jpg&quot;</span>)
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>)
+                                            <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                    <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}_difficile.jpg&quot;</span>)
+                <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>)
+                                            <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">style_context</span>.<span class="ruby-identifier">remove_class</span>(<span class="ruby-string">&#39;complet&#39;</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">style_context</span>.<span class="ruby-identifier">remove_class</span>(<span class="ruby-string">&#39;incorrect&#39;</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-majNbLiensCourant" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">majNbLiensCourant</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>mis a jour du nombre de liens liés au noeud</p>
+
+          <div class="method-source-code" id="majNbLiensCourant-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">majNbLiensCourant</span>()
+        <span class="ruby-ivar">@nbLiensCourant</span> = <span class="ruby-ivar">@nbNoeudsGauche</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@nbNoeudsDroit</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@nbNoeudsBas</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@nbNoeudsHaut</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-nbVoisinsDeuxLien" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">nbVoisinsDeuxLien</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Détecter le nombre de voisins avec lequel le <a href="Noeud.html"><code>Noeud</code></a> peut faire OU possède 2 Liens ou +</p>
+
+          <div class="method-source-code" id="nbVoisinsDeuxLien-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">nbVoisinsDeuxLien</span>()
+      <span class="ruby-identifier">cpt</span> = <span class="ruby-value">0</span>
+      <span class="ruby-keyword">for</span> <span class="ruby-identifier">voisin</span> <span class="ruby-keyword">in</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">noeudVoisins</span>()
+          <span class="ruby-keyword">if</span>(<span class="ruby-identifier">voisin</span>.<span class="ruby-identifier">liensRestants</span>() <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>)
+              <span class="ruby-identifier">cpt</span> = <span class="ruby-identifier">cpt</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+          <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">cpt</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-nbVoisinsNComplets" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">nbVoisinsNComplets</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Renvoie le nombre de voisins du noeud qui ne sont pas encore complets</p>
+
+          <div class="method-source-code" id="nbVoisinsNComplets-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 145</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">nbVoisinsNComplets</span>()
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">voisinsNonComplets</span>.<span class="ruby-identifier">size</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-nbVoisinsUnLien" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">nbVoisinsUnLien</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Détecter le nombre de voisins avec lequel le <a href="Noeud.html"><code>Noeud</code></a> peut faire OU possède EXACTEMENT 1 <a href="Lien.html"><code>Lien</code></a></p>
+
+          <div class="method-source-code" id="nbVoisinsUnLien-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">nbVoisinsUnLien</span>()
+      <span class="ruby-identifier">cpt</span> = <span class="ruby-value">0</span>
+      <span class="ruby-keyword">for</span> <span class="ruby-identifier">voisin</span> <span class="ruby-keyword">in</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">noeudVoisins</span>()
+          <span class="ruby-keyword">if</span>(<span class="ruby-identifier">voisin</span>.<span class="ruby-identifier">liensRestants</span>() <span class="ruby-operator">==</span> <span class="ruby-value">1</span>)
+              <span class="ruby-identifier">cpt</span> = <span class="ruby-identifier">cpt</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+          <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">cpt</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-nbVoisinsZeroLien" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">nbVoisinsZeroLien</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Détecter le nombre de voisins avec lequel le <a href="Noeud.html"><code>Noeud</code></a> ne peut PAS faire de <a href="Lien.html"><code>Lien</code></a></p>
+
+          <div class="method-source-code" id="nbVoisinsZeroLien-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">nbVoisinsZeroLien</span>()
+      <span class="ruby-keyword">return</span>( <span class="ruby-value">4</span> <span class="ruby-operator">-</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">voisinsNonComplets</span>().<span class="ruby-identifier">size</span>() )
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-noeudVoisins" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">noeudVoisins</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Renvoie un tableau contenant les noeuds voisins d’un noeud donné</p>
+
+          <div class="method-source-code" id="noeudVoisins-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">noeudVoisins</span>
+        <span class="ruby-constant">Array</span> <span class="ruby-identifier">nVoisins</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@nGauche</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span>
+                <span class="ruby-identifier">nVoisins</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nGauche</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@nDroit</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span>
+                <span class="ruby-identifier">nVoisins</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nDroit</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@nBas</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span>
+                <span class="ruby-identifier">nVoisins</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nBas</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@nHaut</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span>
+                <span class="ruby-identifier">nVoisins</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@nHaut</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">nVoisins</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-surbriller" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">surbriller</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Abel</p>
+
+          <div class="method-source-code" id="surbriller-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">surbriller</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@type</span> <span class="ruby-operator">==</span> <span class="ruby-node">&quot;#{@nbLiens.to_s}&quot;</span>)
+                <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}_orange.jpg&quot;</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">ima</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-node">&quot;./images/Noeud/#{@nbLiens.to_s}barre_orange.jpg&quot;</span>)
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-identifier">ima</span>)
+
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-voisinsNonComplets" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">voisinsNonComplets</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Renvoie dans un tableau les voisins du noeud qui ne sont pas encore complets</p>
+
+          <div class="method-source-code" id="voisinsNonComplets-source">
+            <pre><span class="ruby-comment"># File Hashi/Noeud.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">voisinsNonComplets</span>
+        <span class="ruby-identifier">voisins</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">noeudVoisins</span>
+        <span class="ruby-identifier">voisinsNC</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+
+        <span class="ruby-identifier">voisins</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">voisin</span><span class="ruby-operator">|</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">voisin</span>.<span class="ruby-identifier">estComplet?</span>
+                        <span class="ruby-identifier">voisinsNC</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">voisin</span>)
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">voisinsNC</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

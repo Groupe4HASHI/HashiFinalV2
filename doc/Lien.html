@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Lien - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link">Gtk::Button
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-creer">::creer</a>
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-ajouterTrait">#ajouterTrait</a>
+    <li ><a href="#method-i-effacerTout">#effacerTout</a>
+    <li ><a href="#method-i-getDirection">#getDirection</a>
+    <li ><a href="#method-i-getType">#getType</a>
+    <li ><a href="#method-i-maj">#maj</a>
+    <li ><a href="#method-i-setDirection">#setDirection</a>
+    <li ><a href="#method-i-setType">#setType</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Lien">
+  <h1 id="class-Lien" class="class">
+    class Lien
+  </h1>
+
+  <section class="description">
+    
+<p>load ‘Noeud.rb’</p>
+
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      <div id="attribute-i-direction" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">direction</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un lien a un identifiant, connait les deux noeuds qui lient, le nombre de trait qu’il y a entre ces deux noeuds. Il y aura donc 3 VI: @grille : la grille sur laquelle sera placé le lien @noeudDeb et @noeudFin : les deux noeuds qui pouront être liées par le lien @nbTrait : le nombre de traits actuels entre dans le noeud(s’il est égal à 0 c’est qu’il y a pas de trait) @direction : la direction du lien. Si la valeur est “v” alors ce lien est vertical et si la valeur est “h” alors le lien est horizental. @type : le type du lien (si “-1” c’est un faux lien, “0” pas de lien, “1” un seul lien, “2” un double lien) Un lien sera capable de s’afficher, d’ajouter un trait et d’effacer tout les traits existants. Le <a href="Lien.html"><code>Lien</code></a> aura des paramètres lors de la création, donc on créera une nouvelle méthode de classe “Lien.creer”, et on redefinera la méthode initialize en affectant 0 à la VI nbTrait et respectivement aux VI idLien, caseDeb et caseFin, un identifiant, une case de debut et une case de fin.  .</p>
+        </div>
+      </div>
+      <div id="attribute-i-grille" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">grille</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-image" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">image</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un lien a un identifiant, connait les deux noeuds qui lient, le nombre de trait qu’il y a entre ces deux noeuds. Il y aura donc 3 VI: @grille : la grille sur laquelle sera placé le lien @noeudDeb et @noeudFin : les deux noeuds qui pouront être liées par le lien @nbTrait : le nombre de traits actuels entre dans le noeud(s’il est égal à 0 c’est qu’il y a pas de trait) @direction : la direction du lien. Si la valeur est “v” alors ce lien est vertical et si la valeur est “h” alors le lien est horizental. @type : le type du lien (si “-1” c’est un faux lien, “0” pas de lien, “1” un seul lien, “2” un double lien) Un lien sera capable de s’afficher, d’ajouter un trait et d’effacer tout les traits existants. Le <a href="Lien.html"><code>Lien</code></a> aura des paramètres lors de la création, donc on créera une nouvelle méthode de classe “Lien.creer”, et on redefinera la méthode initialize en affectant 0 à la VI nbTrait et respectivement aux VI idLien, caseDeb et caseFin, un identifiant, une case de debut et une case de fin.  .</p>
+        </div>
+      </div>
+      <div id="attribute-i-nbTrait" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">nbTrait</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un lien a un identifiant, connait les deux noeuds qui lient, le nombre de trait qu’il y a entre ces deux noeuds. Il y aura donc 3 VI: @grille : la grille sur laquelle sera placé le lien @noeudDeb et @noeudFin : les deux noeuds qui pouront être liées par le lien @nbTrait : le nombre de traits actuels entre dans le noeud(s’il est égal à 0 c’est qu’il y a pas de trait) @direction : la direction du lien. Si la valeur est “v” alors ce lien est vertical et si la valeur est “h” alors le lien est horizental. @type : le type du lien (si “-1” c’est un faux lien, “0” pas de lien, “1” un seul lien, “2” un double lien) Un lien sera capable de s’afficher, d’ajouter un trait et d’effacer tout les traits existants. Le <a href="Lien.html"><code>Lien</code></a> aura des paramètres lors de la création, donc on créera une nouvelle méthode de classe “Lien.creer”, et on redefinera la méthode initialize en affectant 0 à la VI nbTrait et respectivement aux VI idLien, caseDeb et caseFin, un identifiant, une case de debut et une case de fin.  .</p>
+        </div>
+      </div>
+      <div id="attribute-i-status" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">status</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-type" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">type</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        <p>Un lien a un identifiant, connait les deux noeuds qui lient, le nombre de trait qu’il y a entre ces deux noeuds. Il y aura donc 3 VI: @grille : la grille sur laquelle sera placé le lien @noeudDeb et @noeudFin : les deux noeuds qui pouront être liées par le lien @nbTrait : le nombre de traits actuels entre dans le noeud(s’il est égal à 0 c’est qu’il y a pas de trait) @direction : la direction du lien. Si la valeur est “v” alors ce lien est vertical et si la valeur est “h” alors le lien est horizental. @type : le type du lien (si “-1” c’est un faux lien, “0” pas de lien, “1” un seul lien, “2” un double lien) Un lien sera capable de s’afficher, d’ajouter un trait et d’effacer tout les traits existants. Le <a href="Lien.html"><code>Lien</code></a> aura des paramètres lors de la création, donc on créera une nouvelle méthode de classe “Lien.creer”, et on redefinera la méthode initialize en affectant 0 à la VI nbTrait et respectivement aux VI idLien, caseDeb et caseFin, un identifiant, une case de debut et une case de fin.  .</p>
+        </div>
+      </div>
+      <div id="attribute-i-x" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">x</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-i-y" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">y</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+    </section>
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-creer" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">creer</span><span
+            class="method-args">(uneGrille, lig, col)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="creer-source">
+            <pre><span class="ruby-comment"># File Hashi/Lien.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Lien</span>.<span class="ruby-identifier ruby-title">creer</span>(<span class="ruby-identifier">uneGrille</span>, <span class="ruby-identifier">lig</span>, <span class="ruby-identifier">col</span>)
+        <span class="ruby-identifier">new</span>(<span class="ruby-identifier">uneGrille</span>, <span class="ruby-identifier">lig</span>, <span class="ruby-identifier">col</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-new" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(uneGrille, lig, col)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File Hashi/Lien.rb, line 26</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">uneGrille</span>, <span class="ruby-identifier">lig</span>, <span class="ruby-identifier">col</span>)
+            <span class="ruby-keyword">super</span>()
+            <span class="ruby-ivar">@grille</span>, <span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span> = <span class="ruby-identifier">uneGrille</span>, <span class="ruby-identifier">lig</span>, <span class="ruby-identifier">col</span>
+            <span class="ruby-comment">#super(uneGrille, 0, lig, col)</span>
+            <span class="ruby-ivar">@nbTrait</span> = <span class="ruby-value">0</span>
+            <span class="ruby-ivar">@status</span> = <span class="ruby-string">&#39;l&#39;</span>
+            <span class="ruby-ivar">@direction</span> = <span class="ruby-string">&#39;&#39;</span>
+            <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">nil</span>);
+            <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-ivar">@image</span>)
+
+            <span class="ruby-comment">#  Retire les contours</span>
+<span class="ruby-identifier">set_relief</span>(<span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">ReliefStyle</span><span class="ruby-operator">::</span><span class="ruby-constant">NONE</span>)
+<span class="ruby-identifier">always_show_image</span> = <span class="ruby-keyword">false</span>
+
+            <span class="ruby-identifier">set_sensitive</span>(<span class="ruby-keyword">false</span>)  <span class="ruby-comment"># Un lien n&#39;est pas cliquable par défaut</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+      <div id="method-i-ajouterTrait" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">ajouterTrait</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="ajouterTrait-source">
+            <pre><span class="ruby-comment"># File Hashi/Lien.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">ajouterTrait</span>()
+        <span class="ruby-ivar">@nbTrait</span> = <span class="ruby-ivar">@nbTrait</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-effacerTout" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">effacerTout</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="effacerTout-source">
+            <pre><span class="ruby-comment"># File Hashi/Lien.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">effacerTout</span>()
+        <span class="ruby-ivar">@nbTrait</span> = <span class="ruby-value">0</span>
+        <span class="ruby-ivar">@direction</span> = <span class="ruby-string">&#39;&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-getDirection" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">getDirection</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="getDirection-source">
+            <pre><span class="ruby-comment"># File Hashi/Lien.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">getDirection</span>
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@direction</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-getType" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">getType</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="getType-source">
+            <pre><span class="ruby-comment"># File Hashi/Lien.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">getType</span>()
+        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@nbTrait</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-maj" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">maj</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Màj du lien</p>
+
+          <div class="method-source-code" id="maj-source">
+            <pre><span class="ruby-comment"># File Hashi/Lien.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">maj</span>()
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@nbTrait</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@direction</span><span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
+                                              <span class="ruby-ivar">@image</span> = <span class="ruby-constant">Gtk</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:file</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">nil</span>);
+                                              <span class="ruby-keyword">self</span>.<span class="ruby-identifier">set_image</span>(<span class="ruby-ivar">@image</span>)
+      <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@nbTrait</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+          <span class="ruby-comment"># Si direction == &quot;h&quot; alors il est horizontal</span>
+          <span class="ruby-comment"># Sinon il est vertical</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;h&#39;</span>
+                                                              <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                               <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/1_horiz.png&quot;</span>
+                                                        <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                               <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/1moyen_horiz.png&quot;</span>
+                                                        <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                               <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/1difficile_horiz.png&quot;</span>
+                                                        <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">else</span>
+                                                              <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                               <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/1_verti.png&quot;</span>
+                                                              <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                               <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/1moyen_verti.png&quot;</span>
+                                                              <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                               <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/1difficile_verti.png&quot;</span>
+                                                              <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@nbTrait</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-ivar">@direction</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;h&#39;</span>
+                                                      <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/2_horiz.png&quot;</span>
+                                                      <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/2moyen_horiz.png&quot;</span>
+                                                      <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/2difficile_horiz.png&quot;</span>
+                                                      <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">else</span>
+                                                      <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">10</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">7</span>)
+                                                       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/2_verti.png&quot;</span>
+                                                      <span class="ruby-keyword">elsif</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">11</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">8</span>)
+                                                       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/2moyen_verti.png&quot;</span>
+                                                      <span class="ruby-keyword">else</span>(<span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">lignes</span> <span class="ruby-operator">==</span> <span class="ruby-value">13</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@grille</span>.<span class="ruby-identifier">colonnes</span> <span class="ruby-operator">==</span> <span class="ruby-value">9</span>)
+                                                       <span class="ruby-keyword">self</span>.<span class="ruby-identifier">image</span>.<span class="ruby-identifier">from_file</span>= <span class="ruby-string">&quot;./images/Lien/2difficile_verti.png&quot;</span>
+                                                      <span class="ruby-keyword">end</span>
+          <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-setDirection" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">setDirection</span><span
+            class="method-args">(uneDirection)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="setDirection-source">
+            <pre><span class="ruby-comment"># File Hashi/Lien.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">setDirection</span>(<span class="ruby-identifier">uneDirection</span>)
+        <span class="ruby-ivar">@direction</span> = <span class="ruby-identifier">uneDirection</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-setType" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">setType</span><span
+            class="method-args">(val)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="setType-source">
+            <pre><span class="ruby-comment"># File Hashi/Lien.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">setType</span>(<span class="ruby-identifier">val</span>)
+        <span class="ruby-ivar">@nbTrait</span> = <span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.4.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
