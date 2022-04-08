@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.6"/>
+  <object class="GtkFrame" id="MenuApropos">
+    <property name="can_focus">False</property>
+    <property name="no_show_all">True</property>
+    <property name="label_xalign">0</property>
+    <property name="shadow_type">none</property>
+    <child>
+      <object class="GtkAlignment">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="left_padding">12</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">
+Puzzle Hashi : résolution et aide à la résolution
+Projet de groupe à l'occasion du S6 de notre L3
+
+Créé par le groupe 4 qui est composé de :
+
+
+AUGEREAU Bastien
+
+COUTOLLEU Abel
+
+LEMOULT Nicolas
+
+LEMRABOTT Mohamed
+
+MOQUET Alexandre
+
+MROZOWSKI Pierre-Louis
+
+TAN Tony
+
+TESSIER Killian</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton">
+                <property name="label">gtk-undo</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="use_stock">True</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="retour" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child type="label">
+      <object class="GtkLabel">
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Menu À propos</property>
+      </object>
+    </child>
+  </object>
+</interface>

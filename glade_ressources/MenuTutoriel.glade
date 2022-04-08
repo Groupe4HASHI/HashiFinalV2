@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.2 -->
+<interface>
+  <requires lib="gtk+" version="3.6"/>
+  <object class="GtkTextBuffer" id="buffTuto0">
+    <property name="text" translatable="yes">Le Hashi(court pour hashiwokakero, "construire des ponts" en Japonais) est un jeu de logique d'origine Japonaise.
+Le principe est simple: il faut relier un nombre de points entre eux avec des ponts.
+
+L'enigme se pose sur une grille carré de taille variable. On y dispose des iles occupant toutes une seule case de notre grille, et contenant en leur centre une valeur. Pour l'emporter il faut relier toutes les iles(ou noeuds) entres elle en suivant quelques rêgles:
+
+- Un lien commence sur une île et se termine sur une autre.
+
+- Un lien est tracé en ligne orthogonale sans croiser un autre lien ou un noeud.
+
+- Le nombre indiqué sur une île est le nombre de ponts qui doivent passer par elle. Un pont peut être simple ou double.
+
+- Les îles doivent ne former qu'un seul groupe.</property>
+  </object>
+  <object class="GtkTextBuffer" id="buffTuto1">
+    <property name="text" translatable="yes">Avant de passer aux astuces pour le jeu, expliquons les commandes et l'écran de jeu.
+
+Voici une grille de jeu, pour créer un pont il suffit de cliquer entre deux iles, le clic permet de cycler entre 1, 2 et 0 ponts.
+
+Si l'on place le curseur sur une île, les ponts possibles sont visibles en surbrillance.
+
+Quelques fonctionnalités sont disponibles pour encadrer la partie:
+
+- Annuler / répêter des coups.
+
+- Mettre en pause
+
+- Recommencer la partie de zéro
+
+- Demander une aide (astuce, mise en valeur des erreurs)
+
+- Formuler une hypothèse (crée un point auquel on peut retourner si on le souhaite)</property>
+  </object>
+  <object class="GtkTextBuffer" id="buffTuto2">
+    <property name="text" translatable="yes">La plupart des plateaux de Hashi contiennent des situations à la solution évidente, lorsqu'une île voit coincider son nombre de ponts possibles et sa valeur.
+
+Quelques cas d'îles évidentes:
+
+- Valeur 4 dans un coin.
+
+- Valeur 6 sur un côté.
+
+- Valeur 8.
+
+Dans ces trois exemples la valeur de l'île est forcément égale au nombre le liens possibles.
+
+Il existe aussi des cas dans lesquels on peut placer d'emblée une partie des liens d'une île, lorsque le nombre de ponts possibles est proche de la valeur de l'île:
+
+- Île 3 dans un coin.
+
+- Île 5 sur un côté.
+
+- Île 7.
+
+Dans ces trois cas l'évidence est partielle, on peut directement poser un lien dans chaque direction possible, rien n'empèche de revenir complêter plus tard lorsque d'autres ponts auront été formés.
+</property>
+  </object>
+  <object class="GtkTextBuffer" id="buffTuto3">
+    <property name="text" translatable="yes">La présence d'îles de valeur 1 peut créer de nombreuses situations d'évidence car cela réduit le nombre de lien possible sans toucher au nombre de voisins. Quelques exemples où une île voisine de valeur 1 crée une évidence:
+
+- Les îles de valeur 3 en coin, 5 au mur et 7 vues dans l'exemple précédent deviennent des évidence totales si une île de valeur 1 entre dans l'equation.
+
+- Île de valeur 2 avec deux voisins.
+
+- Île de valeur 4 avec 3 voisins dont deux 1.
+
+- Île de valeur 6 avec 4 voisins dont deux 1.
+
+Cas particulier, un 6 possédant 4 voisins dont un 1. Dans ce cas, que l'on remplisse le 1 ou non il faudra poser un lien sur chaque autre voisin, on ne remplit donc que ces derniers.</property>
+  </object>
+  <object class="GtkTextBuffer" id="buffTuto4">
+    <property name="text" translatable="yes">Pour rappel, les îles ne doivent former qu'un seul groupe pour l'emporter, celà signifie qu'on peut accéder à nimporte quelle île quel que soit le point de départ en prenant les ponts. Cette rêgle permet d'écarter certains cas pouvant sembler évidents:
+
+- Île 3 entourée avec 3 îles dont une île 2 et une île 1.
+
+- Île 2 avec 3 voisins dont deux îles 1.
+
+Dans ces deux cas il faudra forcément un lien vers la troisième île.
+
+Parfois des chaines d'îles bien plus grandes peuvent créer des situations d'isolation. Il faut alors chercher et identifier la ou les îles qui doivent relier cette chaine au reste du puzzle.</property>
+  </object>
+  <object class="GtkTextBuffer" id="buffTuto5">
+    <property name="text" translatable="yes">Pour la résolution des puzzles les plus complexes, l'utilisation des règles précédentes peut ne plus suffire. Il est alors question de formuler des hypothèses sur plusieurs coups pour voir où les erreurs sont capable d'apparaitre et quel conflits seraient générés. Il est vital de continuer d'utiliser les règles vues plus tôt, mais en les combinant entre elles et à cette démarche pour résoudre les niveaux les plus complexes.</property>
+  </object>
+  <object class="GtkFrame" id="MenuTutoriel">
+    <property name="can_focus">False</property>
+    <property name="no_show_all">True</property>
+    <property name="label_xalign">0</property>
+    <property name="shadow_type">none</property>
+    <child>
+      <object class="GtkBox" id="boxPrinciTuto">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox" id="boxNavigTuto">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btnRetour">
+                <property name="label" translatable="yes">Retour</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="retour" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnPrecedent">
+                <property name="label" translatable="yes">Précédent</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="precedent" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnSuivant">
+                <property name="label" translatable="yes">Suivant</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="suivant" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblTuto">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">10</property>
+            <property name="label" translatable="yes">&lt;span font='16'&gt;Tutoriels et techniques&lt;/span&gt;</property>
+            <property name="use_markup">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxTuto0">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel" id="lblTuto0">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="label" translatable="yes">&lt;span font='14'&gt;Introduction&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTextView" id="txtTuto0">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+                <property name="wrap_mode">word</property>
+                <property name="cursor_visible">False</property>
+                <property name="buffer">buffTuto0</property>
+                <property name="accepts_tab">False</property>
+                <property name="input_purpose">alpha</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxTuto1">
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel" id="lblTuto1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="label" translatable="yes">&lt;span font='14'&gt;Commande&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTextView" id="txtTuto1">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+                <property name="wrap_mode">word</property>
+                <property name="cursor_visible">False</property>
+                <property name="buffer">buffTuto1</property>
+                <property name="accepts_tab">False</property>
+                <property name="input_purpose">alpha</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxTuto2">
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel" id="lblTuto2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="label" translatable="yes">&lt;span font='14'&gt;Situations d'évidence, partie 1&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTextView" id="txtTuto2">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+                <property name="wrap_mode">word</property>
+                <property name="cursor_visible">False</property>
+                <property name="buffer">buffTuto2</property>
+                <property name="accepts_tab">False</property>
+                <property name="input_purpose">alpha</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxTuto3">
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel" id="lblTuto3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="label" translatable="yes">&lt;span font='14'&gt;Situations d'évidence, partie 2&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTextView" id="txtTuto3">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+                <property name="wrap_mode">word</property>
+                <property name="cursor_visible">False</property>
+                <property name="buffer">buffTuto3</property>
+                <property name="accepts_tab">False</property>
+                <property name="input_purpose">alpha</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxTuto4">
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel" id="lblTuto4">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="label" translatable="yes">&lt;span font='14'&gt;Isolation&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTextView" id="txtTuto4">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+                <property name="wrap_mode">word</property>
+                <property name="cursor_visible">False</property>
+                <property name="buffer">buffTuto4</property>
+                <property name="accepts_tab">False</property>
+                <property name="input_purpose">alpha</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxTuto5">
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel" id="lblTuto5">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="label" translatable="yes">&lt;span font='14'&gt;Prévisions&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTextView" id="txtTuto5">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+                <property name="wrap_mode">word</property>
+                <property name="cursor_visible">False</property>
+                <property name="buffer">buffTuto5</property>
+                <property name="accepts_tab">False</property>
+                <property name="input_purpose">alpha</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">7</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="label_item">
+      <placeholder/>
+    </child>
+  </object>
+</interface>
